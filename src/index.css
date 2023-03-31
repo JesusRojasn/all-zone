@@ -74,9 +74,13 @@ code {
 }
 
 .boton {
-  background-color: #58889d;
+ margin-bottom: 10px;
  
 
+}
+
+.olvidarcontraseña {
+  text-decoration: underline;
 }
 
 
