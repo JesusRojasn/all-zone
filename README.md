@@ -1,6 +1,6 @@
 # PRUEBA JESUS 3
 
-# PRUEBA CONSUELO realizada por JESSUS
+# PRUEBA CONSUELO realizada por JESUS
 
 # Getting Started with Create React App
 
