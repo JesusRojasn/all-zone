@@ -48,18 +48,37 @@ code {
 .formulario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 500px;
+  margin-top: 50px;
+  height: 400px;
+  width: 600px;
  background-color: #2F3D4D;
- border-radius: 10px;
+ color: white;
+ border-radius: 30px;
 }
 
 .fondoFormulario { 
   display: flex;
   justify-content: center;
-  background-color: #7DCDEF;
-  height: 100vh;
+ 
+  background-color: rgba(191, 232, 249, 0.804);
+  
+  height: 70vh;
 
 }
+
+.caja {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.boton {
+  background-color: #58889d;
+ 
+
+}
+
+
+ 
 

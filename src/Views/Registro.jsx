@@ -1,31 +1,32 @@
-import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
 
-function PlaintextExample() {
+function Registro() {
   return (
     <div className='fondoFormulario'>
     <Form className='formulario'>
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-        <Form.Label column sm="2">
-          Email
-        </Form.Label>
-        <Col sm="10">
-          <Form.Control plaintext readOnly defaultValue="email@example.com" />
-        </Col>
+    <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Label>Nombre de usuario</Form.Label>
+        <Form.Control type="text" placeholder="" />
       </Form.Group>
 
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
-        <Form.Label column sm="2">
-          Password
-        </Form.Label>
-        <Col sm="10">
-          <Form.Control type="password" placeholder="Password" />
-        </Col>
+      <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" placeholder="xxxx@mail.com" />
       </Form.Group>
+
+      <Form.Group className="caja" controlId="formGroupPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="*******" />
+      </Form.Group>
+      <div>
+        <Button className='boton'>Crear Cuenta</Button>{' '}
+      </div>
+      
     </Form>
+    
     </div>
   );
 }
 
-export default PlaintextExample;
+export default Registro;
