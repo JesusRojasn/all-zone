@@ -1,3 +1,4 @@
+import React from "react";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -5,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import { Button } from "react-bootstrap";
 
-function PlaintextExample() {
+const InicioSesion = () => {
   return (
     <div className="fondoFormulario">
       <Navbar expand="lg">
@@ -28,7 +29,6 @@ function PlaintextExample() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
       <div className="formulario1">
         <div className="formulario">
           <Form>
@@ -39,7 +39,7 @@ function PlaintextExample() {
               <Form.Control type="password" placeholder="Contraseña" />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              Ingresar
             </Button>
           </Form>
           <h6 className="OlvideContraseña">Olvide mi Contraseña</h6>
@@ -47,6 +47,6 @@ function PlaintextExample() {
       </div>
     </div>
   );
-}
+};
 
-export default PlaintextExample;
+export default InicioSesion;
