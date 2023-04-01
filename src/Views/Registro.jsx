@@ -1,5 +1,7 @@
+
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+
 
 function Registro() {
   return (
@@ -25,8 +27,10 @@ function Registro() {
       
     </Form>
     
+
     </div>
   );
 }
 
 export default Registro;
+

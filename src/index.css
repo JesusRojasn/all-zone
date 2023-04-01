@@ -1,14 +1,17 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -23,20 +26,15 @@ code {
 
 .cards {
   margin: 50px;
-
 }
 
 .logoFooter {
   max-width: 100px;
- 
 }
 
 .footer {
-  
-  background-color: #2F3D4D;
+  background-color: #2f3d4d;
   color: white;
-  
-
 }
 
 .logosRRSS {
@@ -50,17 +48,19 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-top: 50px;
   height: 400px;
   width: 600px;
  background-color: #2F3D4D;
  color: white;
  border-radius: 30px;
-}
 
-.fondoFormulario { 
+}
+.formulario1 {
   display: flex;
   justify-content: center;
+
  
   background-color: rgba(191, 232, 249, 0.804);
   

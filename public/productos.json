@@ -1,0 +1,152 @@
+[
+  {
+    "MARCA": "APPLE",
+    "ID": "P1",
+    "TITULO": "iPhone 11 64 gb Negro",
+    "DESCRIPCION": "El iPhone 11 funciona con el chip A13 Bionic; uno de los más veloces y potentes del mercado; y además cuenta con una batería duradera que aguanta todo el día.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 349000,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/LxLswSt/iphone11.jpg"
+  },
+  {
+    "MARCA": "APPLE",
+    "ID": "P2",
+    "TITULO": "iPhone 12 64GB Blanco",
+    "DESCRIPCION": "El iPhone 12 tiene una espectacular pantalla Super Retina XDR de 6.1 pulgadas.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 699990,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/C6W5GP0/iphone12.jpg"
+  },
+  {
+    "MARCA": "APPLE",
+    "ID": "P3",
+    "TITULO": "iPhone 14 256 GB",
+    "DESCRIPCION": "El iPhone 14 presenta un nuevo sistema de cámara dual que eleva la calidad de tus fotos. La cámara ultra gran angular captura fotos con una amplitud de hasta cuatro veces más que los modelos previos de iPhone.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 850000,
+    "VENDEDOR": "Consuelo Araya",
+    "IMG": "https://i.ibb.co/NtdmLLW/iphone14.jpg"
+  },
+  {
+    "MARCA": "APPLE",
+    "ID": "P4",
+    "TITULO": "iPhone XR 128GB Rojo",
+    "DESCRIPCION": "Producto liberado y Homologado para todas las compañías móviles Nacionales e Internacionales.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 299990,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/hF8Z0mk/Iphone-XR.jpg"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "ID": "P5",
+    "TITULO": "Huawei Nova Y90 Negro 128 GB",
+    "DESCRIPCION": "Pantalla HUAWEI Sin Bordes FullView de 6.7; SuperCarga HUAWEI de 40 W; batería de 5000 mAh; Cámara triple AI de 50 MP.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 199990,
+    "VENDEDOR": "Nelson Gonzalez",
+    "IMG": "https://i.ibb.co/7pKk8xC/Celular-Huawei-Nova-Y90-Negro-128-GB.jpg"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "ID": "P6",
+    "TITULO": "Huawei Nova Y70 128GB Azul",
+    "DESCRIPCION": "El exterior de cristal del teléfono parece fluir entre los dedos; tomando forma a medida que los ojos siguen cada graciosa curva.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 159990,
+    "VENDEDOR": "Consuelo Araya",
+    "IMG": "https://i.ibb.co/WzNPLHV/Huawei-Nova-Y70-128-GB-Azul.jpg"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "ID": "P7",
+    "TITULO": "Huawei P50 256GB Dorado",
+    "DESCRIPCION": "La nueva óptica HUAWEI XD y el motor de imagen HUAWEI XD Fusion Pro permiten la entrada de una mayor cantidad de luz; capturando patrones y texturas con mayor detalle.",
+    "CATEGORIA": "TELEFONO",
+    "PRECIO": 649990,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/7kCNrHx/Huawei-P50-256-GB-Dorado.jpg"
+  },
+  {
+    "MARCA": "LENOVO",
+    "ID": "P8",
+    "TITULO": "Lenovo Ideapad Gaming 3",
+    "DESCRIPCION": "Intel Core i5 8GB RAM 256GB SSD NVIDIA GeForce GTX 1650 Ti 4GB 15.6 FHD.",
+    "CATEGORIA": "NOTEBOOK",
+    "PRECIO": 629990,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/RDfP8Xd/Notebook-Ideapad-Gaming-3.jpg"
+  },
+  {
+    "MARCA": "HP",
+    "ID": "P9",
+    "TITULO": "Notebook HP Victus",
+    "DESCRIPCION": "15-fb0116la Ryzen5 8GB RAM",
+    "CATEGORIA": "NOTEBOOK",
+    "PRECIO": 679990,
+    "VENDEDOR": "Consuelo Araya",
+    "IMG": "https://i.ibb.co/ZzqXZW5/Notebook-HP-Victus.jpg"
+  },
+  {
+    "MARCA": "MSI",
+    "ID": "P10",
+    "TITULO": "Notebook Gamer MSI GF63",
+    "DESCRIPCION": "Intel i7-12650H 16GB RAM 512GBSSD NVIDIA RTX 4050 6GB 15.6\" 144Hz.",
+    "CATEGORIA": "NOTEBOOK",
+    "PRECIO": 1129990,
+    "VENDEDOR": "Consuelo Araya",
+    "IMG": "https://i.ibb.co/CWDPD19/Notebook-Gamer-MSI-GF63.jpg"
+  },
+  {
+    "MARCA": "ACER",
+    "ID": "P11",
+    "TITULO": "Notebook Gamer Acer",
+    "DESCRIPCION": "16GB RAM 1TB HDD+256GB SSD GTX 1650 15.6.",
+    "CATEGORIA": "NOTEBOOK",
+    "PRECIO": 749990,
+    "VENDEDOR": "Nelson Gonzalez",
+    "IMG": "https://i.ibb.co/gmqZYq7/Notebook-Gamer-Acer.jpg"
+  },
+  {
+    "MARCA": "CAIXUN",
+    "ID": "P12",
+    "TITULO": "Led 43\" CAIXUN FHD Smart TV ANDROID",
+    "DESCRIPCION": "Diseño modelos para una experiencia de pantalla única; los bordes ultra delgados permiten disfrutar al máximo tu programación favorita.",
+    "CATEGORIA": "TELEVISOR",
+    "PRECIO": 149990,
+    "VENDEDOR": "Nelson Gonzalez",
+    "IMG": "https://i.ibb.co/qmM31t7/Led-43-C43-V1-FA-FHD-Smart-TV-ANDROID.jpg"
+  },
+  {
+    "MARCA": "SAMSUMG",
+    "ID": "P13",
+    "TITULO": "LED Samsung 60\" AU7000 4K UHD Smart TV",
+    "DESCRIPCION": "El potente 4K Upscaling garantiza una resolución de hasta 4K real para el contenido que quieras.",
+    "CATEGORIA": "TELEVISOR",
+    "PRECIO": 399990,
+    "VENDEDOR": "Consuelo Araya",
+    "IMG": "https://i.ibb.co/gSrcxQt/LED-Samsung-60-AU7000-4-K-UHD-Smart-TV.jpg"
+  },
+  {
+    "MARCA": "LG",
+    "ID": "P14",
+    "TITULO": "LED 50'' 50UQ7500 4K TV UHD TV Smart TV",
+    "DESCRIPCION": "LG UHD ThinQ AI 50'' UQ7500 4K Smart TV; 4K Procesador Inteligente α5 generación 5",
+    "CATEGORIA": "TELEVISOR",
+    "PRECIO": 279990,
+    "VENDEDOR": "Jesus Rojas",
+    "IMG": "https://i.ibb.co/DpHkKwf/LED-50-50-UQ7500-4-K-TV-UHD-TV-Smart-TV.jpg"
+  },
+  {
+    "MARCA": "LG",
+    "ID": "P15",
+    "TITULO": "LED 50'' LG 4K TV",
+    "DESCRIPCION": "LG UHD ThinQ AI 50'' UQ8050 4K Smart TV; 4K Procesador Inteligente α5 generación 5; Magic Remote.",
+    "CATEGORIA": "TELEVISOR",
+    "PRECIO": 429990,
+    "VENDEDOR": "Nelson Gonzalez",
+    "IMG": "https://i.ibb.co/kDNZ6mP/LED-50-50-UQ8050-4-K-TV.jpg"
+  }
+]
