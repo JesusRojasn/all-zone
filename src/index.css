@@ -50,20 +50,21 @@ code {
   align-items: center;
 
   margin-top: 50px;
-  height: 400px;
+
   width: 600px;
- background-color: #2F3D4D;
- color: white;
- border-radius: 30px;
+  background-color: #2F3D4D;
+  color: white;
+  border-radius: 30px;
 
 }
+
 .fondoFormulario {
   display: flex;
   justify-content: center;
 
- 
+
   background-color: rgba(191, 232, 249, 0.804);
-  
+
   height: 70vh;
 
 }
@@ -74,15 +75,16 @@ code {
 }
 
 .boton {
- margin-bottom: 10px;
- 
-
+  margin-bottom: 10px;
+  background-color: #56D1C8 !important;
+  color: black !important;
 }
 
 .olvidarcontraseña {
   text-decoration: underline;
 }
 
-
- 
-
+.nombresPublicar {
+  display: flex;
+  flex-direction: row;
+}
