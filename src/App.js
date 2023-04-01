@@ -2,12 +2,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InicioSesion from "./Views/InicioSesion";
-
+import Cards from "./Components/Cards"
 import Registro from "./Views/Registro";
-import MarketPublico from "./Views/MarketPublico";
+
 
 import Footer from "./Components/Footer";
-import InicioSesion from "./Views/InicioSesion";
+
 
 
 
