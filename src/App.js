@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import InicioSesion from "./Views/InicioSesion";
 
 import Registro from "./Views/Registro";
 import MarketPublico from "./Views/MarketPublico";
@@ -16,9 +17,9 @@ function App() {
       <BrowserRouter>
       
         <Routes>       
-          <Route path="/" element={<MarketPublico></MarketPublico>}></Route>   
-          <Route path="/Registro" element={<Registro></Registro>}></Route>
-          <Route path="/InicioSesion" element={<InicioSesion></InicioSesion>}></Route>
+          <Route path="/" element={<Cards></Cards>}></Route>   
+          <Route path="/registro" element={<Registro></Registro>}></Route>
+          <Route path="/acceso" element={<InicioSesion></InicioSesion>}></Route>
         </Routes>
         
         <Footer></Footer>

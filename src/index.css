@@ -46,30 +46,43 @@ code {
 .formulario {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 20rem;
-  width: 40rem;
-  background-color: #2f3d4d;
-  border-radius: 20px;
-  padding-top: 2rem;
+  align-items: center;
+
+  margin-top: 50px;
+  height: 400px;
+  width: 600px;
+ background-color: #2F3D4D;
+ color: white;
+ border-radius: 30px;
+
 }
 .formulario1 {
   display: flex;
   justify-content: center;
-  margin-top: 15rem;
+
+ 
+  background-color: rgba(191, 232, 249, 0.804);
+  
+  height: 70vh;
+
 }
-.fondoFormulario {
-  display: flex;
-  background-color: #7dcdef;
-  height: 100vh;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: stretch;
-  padding-top: 15px;
+
+.caja {
+  width: 300px;
+  margin-bottom: 15px;
 }
-.OlvideContraseña {
-  display: flex;
-  padding-left: 25rem;
-  padding-top: 5rem;
+
+.boton {
+ margin-bottom: 10px;
+ 
+
 }
+
+.olvidarcontraseña {
+  text-decoration: underline;
+}
+
+
+ 
+
