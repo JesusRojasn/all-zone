@@ -3,6 +3,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function SubMenu() {
   return (
@@ -16,6 +18,24 @@ function SubMenu() {
               <NavDropdown.Item href="#action5">Televisores</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
+          <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Buscar"
+                className="me-2"
+                aria-label="Buscar"
+              />
+              <Button variant="outline-success">Buscar</Button>
+            </Form>
+          </Nav>
+        </Navbar.Collapse>
 
           <Nav className="menu-opciones">
             <NavLink to="/">Marketplace</NavLink>
