@@ -1,7 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+
 import Carrusel from "./Carrusel";
 import Form from "react-bootstrap/Form";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -41,6 +43,7 @@ function Cards() {
               </Nav>
             </Navbar.Collapse>
 
+
             <Nav className="menu-opciones">
               <NavLink to="/">Marketplace</NavLink>
 
@@ -52,8 +55,11 @@ function Cards() {
         </Container>
       </Navbar>
 
+
       <Carrusel></Carrusel>
+
       <div className="cards">
+
         <Card
           style={{ width: "18rem", borderColor: "#7DCDEF", borderWidth: "2px" }}
         >
