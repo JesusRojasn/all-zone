@@ -35,6 +35,13 @@ code {
 .footer {
   background-color: #2f3d4d;
   color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+
+  
+  
 }
 
 .logosRRSS {
@@ -46,12 +53,10 @@ code {
 .formulario {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+justify-content: center;
   align-items: center;
-
-  margin-top: 50px;
-
-  width: 600px;
+width: 500px;
+margin: 50px; 
   background-color: #2F3D4D;
   color: white;
   border-radius: 30px;
@@ -61,11 +66,8 @@ code {
 .fondoFormulario {
   display: flex;
   justify-content: center;
-
-
   background-color: rgba(191, 232, 249, 0.804);
-
-  height: 70vh;
+  height: 76vh;
 
 }
 
@@ -87,4 +89,10 @@ code {
 .nombresPublicar {
   display: flex;
   flex-direction: row;
+}
+
+.container-AgregarPublicacion {
+  display: flex;
+  flex-direction: column;
+  background-color: #2F3D4D;
 }

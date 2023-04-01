@@ -5,10 +5,11 @@ import Figure from 'react-bootstrap/Figure';
 
 function AgregarPublicacion() {
   return (
-    
+
     <div className='fondoFormulario'>
 
       <Form className='formulario'>
+
         <Figure>
           <Figure.Image
             width={171}
@@ -21,11 +22,11 @@ function AgregarPublicacion() {
           </Figure.Caption>
         </Figure>
 
-<div className='nombresPublicar'>
-        <Form.Group className="caja" controlId="formGroupEmail">
-          <Form.Label>Nombre de producto</Form.Label>
-          <Form.Control type="text" placeholder="" />
-        </Form.Group>
+        <div className='nombresPublicar'>
+          <Form.Group className="caja" controlId="formGroupEmail">
+            <Form.Label>Nombre de producto</Form.Label>
+            <Form.Control type="text" placeholder="" />
+          </Form.Group>
 
         </div>
 
@@ -35,7 +36,7 @@ function AgregarPublicacion() {
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupPassword">
-          
+
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               Categoría
