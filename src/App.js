@@ -8,6 +8,7 @@ import Menu from "./Components/Menu";
 import Cards from "./Components/Cards";
 
 import Footer from "./Components/Footer";
+import AgregarPublicacion from "./Views/AgregarPublicacion";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Cards></Cards>}></Route>   
           <Route path="/registro" element={<Registro></Registro>}></Route>
           <Route path="/acceso" element={<InicioSesion></InicioSesion>}></Route>
+          <Route path="/publicar" element={<AgregarPublicacion></AgregarPublicacion>}></Route>
         </Routes>
         
         <Footer></Footer>
