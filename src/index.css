@@ -6,8 +6,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  padding-bottom: 6em;
+  min-height: 100vh;
 }
 
 code {
@@ -38,10 +39,6 @@ code {
   position: absolute;
   bottom: 0;
   width: 100%;
-  
-
-  
-  
 }
 
 .logosRRSS {
@@ -53,14 +50,13 @@ code {
 .formulario {
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
   align-items: center;
-width: 500px;
-margin: 50px; 
-  background-color: #2F3D4D;
+  width: 500px;
+  margin: 50px;
+  background-color: #2f3d4d;
   color: white;
   border-radius: 30px;
-
 }
 
 .fondoFormulario {
@@ -68,7 +64,6 @@ margin: 50px;
   justify-content: center;
   background-color: rgba(191, 232, 249, 0.804);
   height: 76vh;
-
 }
 
 .caja {
@@ -78,7 +73,7 @@ margin: 50px;
 
 .boton {
   margin-bottom: 10px;
-  background-color: #56D1C8 !important;
+  background-color: #56d1c8 !important;
   color: black !important;
 }
 
@@ -94,5 +89,61 @@ margin: 50px;
 .container-AgregarPublicacion {
   display: flex;
   flex-direction: column;
-  background-color: #2F3D4D;
+  background-color: #2f3d4d;
+}
+.detail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  justify-content: center;
+}
+.detail > * {
+  margin-bottom: 20px;
+}
+.buttons button {
+  padding: 0.5rem;
+  width: auto;
+  border-radius: 15px;
+  border: 0.1px solid black;
+  cursor: pointer;
+}
+.botonvolver {
+  background-color: #ff5757;
+  font-weight: 600;
+}
+.botonvolver:hover {
+  background-color: rgb(255, 30, 30);
+}
+.botonvermas {
+  background-color: #56d1c8;
+  font-weight: 600;
+}
+.botonvermas:hover {
+  background-color: #00c0b3;
+}
+
+.Menu {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding-left: 0.5em;
+  color: #2f3d4d;
+}
+
+.Menu:hover {
+  color: #ff5757;
+}
+.viewActiva {
+  color: #ff5757;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding-left: 0.5em;
+}
+.viewActiva:hover {
+  color: #ff5757;
 }
