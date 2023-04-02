@@ -1,7 +1,12 @@
 import React from "react";
+import SubMenuPriv from "../Components/SubMenupriv";
 
 const Usuario = () => {
-  return <div>Usuario</div>;
+  return (
+    <div>
+      <SubMenuPriv></SubMenuPriv>
+    </div>
+  );
 };
 
 export default Usuario;

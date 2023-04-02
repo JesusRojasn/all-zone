@@ -1,12 +1,12 @@
 import React from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
 
-const MisPublicaciones = () => {
+const Detalle = () => {
   return (
     <div>
-      <SubMenuPriv />
+      <SubMenuPriv></SubMenuPriv>
     </div>
   );
 };
 
-export default MisPublicaciones;
+export default Detalle;

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
-function Menu() {
+function Logo() {
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -16,11 +16,9 @@ function Menu() {
             alt="logo"
           />
         </NavLink>
-
-
       </Container>
     </Navbar>
   );
 }
 
-export default Menu;
+export default Logo;

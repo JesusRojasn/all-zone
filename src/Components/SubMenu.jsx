@@ -20,26 +20,24 @@ function SubMenu() {
           </Nav>
 
           <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Buscar"
-                className="me-2"
-                aria-label="Buscar"
-              />
-              <Button variant="outline-success">Buscar</Button>
-            </Form>
-          </Nav>
-        </Navbar.Collapse>
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Form className="d-flex">
+                <Form.Control
+                  type="search"
+                  placeholder="Buscar"
+                  className="me-2"
+                  aria-label="Buscar"
+                />
+                <Button variant="outline-success">Buscar</Button>
+              </Form>
+            </Nav>
+          </Navbar.Collapse>
 
           <Nav className="menu-opciones">
-            <NavLink to="/">Marketplace</NavLink>
-
             <NavLink to="/inicioSesion">Iniciar Sesion</NavLink>
 
             <NavLink to="/registro">Registro</NavLink>
