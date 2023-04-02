@@ -11,7 +11,7 @@ function SubMenu() {
     <Navbar expand="lg">
       <Container>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto Menu">
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Notebooks</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Celulares</NavDropdown.Item>
@@ -38,9 +38,19 @@ function SubMenu() {
           </Navbar.Collapse>
 
           <Nav className="menu-opciones">
-            <NavLink to="/inicioSesion">Iniciar Sesion</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/inicioSesion"
+            >
+              Iniciar Sesion
+            </NavLink>
 
-            <NavLink to="/registro">Registro</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/registro"
+            >
+              Registro
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

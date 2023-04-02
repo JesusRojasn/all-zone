@@ -11,7 +11,7 @@ function SubMenuPriv() {
     <Navbar expand="lg">
       <Container>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto Menu">
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Notebooks</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Celulares</NavDropdown.Item>
@@ -36,11 +36,26 @@ function SubMenuPriv() {
             </Nav>
           </Navbar.Collapse>
           <Nav className="menu-opciones">
-            <NavLink to="/MarketPrivado">Marketplace</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/MarketPrivado"
+            >
+              Marketplace
+            </NavLink>
 
-            <NavLink to="/mispublicaciones">Mis Publicaciones</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/mispublicaciones"
+            >
+              Mis Publicaciones
+            </NavLink>
 
-            <NavLink to="/usuario">Usuario</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/usuario"
+            >
+              Usuario
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
