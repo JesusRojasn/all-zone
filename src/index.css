@@ -8,6 +8,9 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding-bottom: 6em;
+  min-height: 100vh;
 }
 
 code {
@@ -112,10 +115,17 @@ code {
   border: 0.1px solid black;
   cursor: pointer;
 }
-.volver {
-  background-color: rgb(255, 87, 87);
+.botonvolver {
+  background-color: #ff5757;
   font-weight: 600;
 }
-.volver:hover {
+.botonvolver:hover {
   background-color: rgb(255, 30, 30);
+}
+.botonvermas {
+  background-color: #56d1c8;
+  font-weight: 600;
+}
+.botonvermas:hover {
+  background-color: #00c0b3;
 }

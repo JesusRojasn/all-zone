@@ -29,7 +29,7 @@ const Detalle = () => {
           </p>
           <div className="buttons">
             <NavLink to="/">
-              <button className="volver">Volver</button>
+              <button className="botonvolver">Volver</button>
             </NavLink>
           </div>
         </div>

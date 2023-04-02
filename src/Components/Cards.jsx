@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
 
@@ -18,9 +17,11 @@ function Cards() {
               Notebook ThinkPad X1 Carbon 9na Gen (14", Intel)
             </Card.Title>
             <Card.Text>$1.890.000</Card.Text>
-            <NavLink to="/Detalle">
-              <Button variant="primary">Ver Más</Button>
-            </NavLink>
+            <div className="buttons">
+              <NavLink to="/Detalle">
+                <button className="botonvermas">Ver Más</button>
+              </NavLink>
+            </div>
           </Card.Body>
         </Card>
       </div>
