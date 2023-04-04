@@ -11,7 +11,7 @@ function AgregarPublicacion() {
 
       <Form className='formulario'>
 
-        <Figure style={{display: " flex", alignItems:"center", flexDirection: "column" }} >
+        <Figure>
           <Figure.Image
             width={171}
             height={180}

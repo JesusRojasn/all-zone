@@ -64,7 +64,7 @@ function AgregarPublicacion() {
         <Form.Group className="caja">
           <Form.Label>Precio</Form.Label>
           <InputGroup className="mb-3">
-            <InputGroup.Text>$</InputGroup.Text>
+            <InputGroup.Number>$</InputGroup.Number>
             <Form.Control aria-label="Amount (to the nearest dollar)" />
             <InputGroup.Text></InputGroup.Text>
           </InputGroup>
