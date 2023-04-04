@@ -86,13 +86,14 @@ margin: 50px;
   text-decoration: underline;
 }
 
-.nombresPublicar {
-  display: flex;
-  flex-direction: row;
-}
-
 .container-AgregarPublicacion {
   display: flex;
   flex-direction: column;
   background-color: #2F3D4D;
+}
+
+.btn-publicar {
+  display: flex;
+  flex-direction: row;
+
 }
