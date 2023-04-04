@@ -63,7 +63,7 @@ code {
   display: flex;
   justify-content: center;
   background-color: rgba(191, 232, 249, 0.804);
-  height: 82vh;
+  height: 76vh;
 }
 
 .caja {
@@ -142,12 +142,5 @@ code {
 }
 .viewActiva:hover {
   color: #ff5757;
-}
-
-.Figure{
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
