@@ -9,12 +9,16 @@ function AgregarPublicacion() {
       <Form className='formulario'>
 
         <Figure style={{display: " flex", alignItems:"center", flexDirection: "column" }} >
+          
           <Figure.Image
+          className='subirfoto'
             width={171}
             height={180}
             alt="171x180"
             src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8MzM4MDg3fGltYWdlL3BuZ3xoMGYvaGY3LzE0MDcwNjc0NzE4NzUwLnBuZ3xiMDUwZmMyMGMxODkxY2JkNTdhMjZmMWM1YWY1NWZmYTllMTg4Y2E1NGFjMjMzMjRkZjQ1YjA1ZjA3YTFjMThi"
           />
+          
+       
           <Form.Group >
             
             <Form.Control

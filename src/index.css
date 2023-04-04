@@ -85,6 +85,12 @@ code {
   color: black !important;
 }
 
+.subirfoto {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .olvidarcontraseña {
   text-decoration: underline;
 }
