@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function SubMenu() {
+function SubMenuPriv() {
   return (
     <Navbar expand="lg">
       <Container>
@@ -18,7 +18,6 @@ function SubMenu() {
               <NavDropdown.Item href="#action5">Televisores</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
@@ -36,20 +35,26 @@ function SubMenu() {
               </Form>
             </Nav>
           </Navbar.Collapse>
-
           <Nav className="menu-opciones">
             <NavLink
               className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/inicioSesion"
+              to="/MarketPrivado"
             >
-              Iniciar Sesion
+              Marketplace
             </NavLink>
 
             <NavLink
               className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/registro"
+              to="/mispublicaciones"
             >
-              Registro
+              Mis Publicaciones
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/usuario"
+            >
+              Usuario
             </NavLink>
           </Nav>
         </Navbar.Collapse>
@@ -58,4 +63,4 @@ function SubMenu() {
   );
 }
 
-export default SubMenu;
+export default SubMenuPriv;
