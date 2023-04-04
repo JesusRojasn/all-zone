@@ -27,28 +27,24 @@ code {
 
 .cards {
   margin: 50px;
-  
 }
 
-
+.logoFooter {
+  max-width: 100px;
+}
 
 .footer {
   background-color: #2f3d4d;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 81px;
-  bottom: 0;
   position: absolute;
+  bottom: 0;
   width: 100%;
-  
 }
 
 .logosRRSS {
-   width: 30px;
-  
+  max-width: 50px;
+  padding: 5px;
+  margin: 25px;
 }
 
 .formulario {
@@ -61,42 +57,24 @@ code {
   background-color: #2f3d4d;
   color: white;
   border-radius: 30px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  }
-
+}
 
 .fondoFormulario {
   display: flex;
   justify-content: center;
   background-color: rgba(191, 232, 249, 0.804);
-  
-  
+  height: 82vh;
 }
 
 .caja {
-  width: 376px;
+  width: 300px;
   margin-bottom: 15px;
 }
-
-@media screen and (max-width: 500px){
-  .caja {
-    width: auto;
-    margin-bottom: auto;
-  }}
-
 
 .boton {
   margin-bottom: 10px;
   background-color: #56d1c8 !important;
   color: black !important;
-}
-
-.btn-publicar {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-
 }
 
 .olvidarcontraseña {
@@ -173,7 +151,7 @@ code {
   align-items: center;
 }
 
-Usuario/
+/Usuario/
 
 .Container{
 display: flex;

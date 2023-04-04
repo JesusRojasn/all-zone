@@ -1,4 +1,7 @@
-import {Button, Form, Col, Row} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function InicioSesion() {
   return (
