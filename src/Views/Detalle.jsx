@@ -1,32 +1,53 @@
-import React from "react";
+import React, { useContext } from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import MyContext from "../contexts/MyContext";
 
-const Detalle = () => {
+function  Detalle () {
+
+  const {ID} = useParams();
+  const {productos} = useContext(MyContext);
+
+   // Buscamos el producto con el id correspondiente
+  const productoDetalle = productos.find(p => p.ID === ID);
+  
+  console.log(ID)
+  
+  // Si no existe el producto, mostramos un mensaje de error
+  if (!productoDetalle) {
+    return   <div>
+    <h1>Producto no encontrado!</h1>
+    {/* Resto del contenido del componente */}
+  </div>;
+  }
+
+  // Si existe el producto, mostramos su información
+
+
   return (
+
+  
+    
     <div>
       <SubMenuPriv></SubMenuPriv>
       <div className="detail-container">
         <img
-          src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8MzM4MDg3fGltYWdlL3BuZ3xoMGYvaGY3LzE0MDcwNjc0NzE4NzUwLnBuZ3xiMDUwZmMyMGMxODkxY2JkNTdhMjZmMWM1YWY1NWZmYTllMTg4Y2E1NGFjMjMzMjRkZjQ1YjA1ZjA3YTFjMThi"
+          src={productoDetalle.IMG}
           alt="Imagen"
         ></img>
         <div className="detail">
           <h1 className="Nombreproducto">
-            Notebook ThinkPad X1 Carbon 9na Gen (14", Intel)
+          {productoDetalle.TITULO}
           </h1>
-          <h6>ThinKPad</h6>
+          <h6>{productoDetalle.MARCA}</h6>
           <h4>
             {" "}
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ab
-            quibusdam aperiam aliquam dolorum qui, non eveniet distinctio! Unde
-            facere sunt ducimus omnis ab consectetur illo. Molestias libero
-            labore quaerat.
+            {productoDetalle.DESCRIPCION}
           </h4>
-          <p>Vendedor: Jesus Rojas</p>
+          <p>Vendedor: {productoDetalle.VENDEDOR}</p>
           <p>
-            Precio:<strong> $199.000</strong>
+            Precio:<strong> ${productoDetalle.PRECIO}</strong>
           </p>
           <div>
             <NavLink to="/">

@@ -1,4 +1,3 @@
-
 import { Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
@@ -9,8 +8,8 @@ function Cards() {
   const {productos} = useContext(MyContext);
   const navigate = useNavigate();
 
-  const irDetalle= () => {
-    navigate(`/detalle/${productos.ID}`)
+  const irDetalle = (id) => {
+    navigate(`/Detalle/${id}`);
   }
 
 
@@ -48,7 +47,10 @@ function Cards() {
                   <Card.Text>$ {p.PRECIO}</Card.Text>
                   <div className="buttons">
                     
-                    <button className="botonvermas" onClick={irDetalle}>Ver Más</button>
+                    <button className="botonvermas" 
+                    onClick={() => irDetalle(p.ID)} // Aquí pasamos el ID del producto a irDetalle
+                    >
+                      Ver Más</button>
                     
                   </div>
                 </Card.Body>

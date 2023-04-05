@@ -84,9 +84,10 @@ code {
 .fondoFormulario {
   display: flex;
   justify-content: center;
-  
   background-image: url(./Assets/img/fondo.jpg);
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10vh;
   
 }
 

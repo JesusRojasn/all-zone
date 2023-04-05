@@ -26,7 +26,7 @@ function App() {
     const data = await res.json();
     setProductos(data);
   };
-  console.log(productos);
+  
 
   useEffect(() => {
     getProductos();
@@ -46,7 +46,7 @@ function App() {
             <Route path="/MarketPrivado" element={<MarketPrivado></MarketPrivado>}></Route>
             <Route path="/usuario" element={<Usuario></Usuario>}></Route>
             <Route path="/MisPublicaciones" element={<MisPublicaciones></MisPublicaciones>}></Route>
-            <Route path="/Detalle" element={<Detalle></Detalle>}></Route>
+            
             <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
           </Routes>
           
