@@ -1,6 +1,7 @@
 import React from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Detalle = () => {
   return (
@@ -27,9 +28,9 @@ const Detalle = () => {
           <p>
             Precio:<strong> $199.000</strong>
           </p>
-          <div className="buttons">
+          <div>
             <NavLink to="/">
-              <button className="botonvolver">Volver</button>
+            <Button variant="outline-secondary" className='btn-cancelar'>Volver</Button>
             </NavLink>
           </div>
         </div>

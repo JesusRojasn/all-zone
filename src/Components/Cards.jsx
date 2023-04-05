@@ -1,3 +1,4 @@
+
 import { Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
@@ -63,6 +64,7 @@ function Cards() {
     }
     </div>
     </Container>
+
     </div>
   );
 };

@@ -1,11 +1,11 @@
+
 import React, { useEffect, useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InicioSesion from "./Views/InicioSesion";
 import Registro from "./Views/Registro";
-
 import Logo from "./Components/Logo";
-
 import Footer from "./Components/Footer";
 import AgregarPublicacion from "./Views/AgregarPublicacion";
 import MarketPublico from "./Views/MarketPublico";
@@ -17,6 +17,7 @@ import MyContext from "./contexts/MyContext.jsx";
 
 
 function App() {
+
 
   const [productos, setProductos] = useState([]);
 
@@ -52,6 +53,7 @@ function App() {
           <Footer></Footer>
         </BrowserRouter>
       </MyContext.Provider>
+
     </div>
   );
 }
