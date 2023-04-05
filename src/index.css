@@ -26,7 +26,17 @@ code {
 }
 
 .cards {
-  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.cards:hover {
+  box-shadow: 7px 10px 20px 0px;
+  transition: 0.5s;
+  border-radius: 5%;
 }
 
 .footer {
@@ -342,4 +352,16 @@ Button{
   font-size: 60px;
   padding: 0;
   justify-content: center;
+}
+
+.homeContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  gap: 3rem;
+  padding: 1%;
+}
+
+.homeContainerSuperior{
+  margin-top: 2em;
 }
