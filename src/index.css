@@ -108,6 +108,11 @@ code {
   color: #56d1c8 !important 
 }
 
+.btn-buscar{
+  border-color: #56d1c8 !important ;
+  
+}
+
 .subirfoto {
   background-color: white;
   border-radius: 10px;
