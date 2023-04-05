@@ -250,6 +250,7 @@ justify-content: center;
   font-size: x-large;
 }
 
+
 .camposUsuario{
   display: flex;
   justify-content: center;
@@ -261,4 +262,84 @@ display: flex;
 align-items: center;
 flex-direction: column;
 text-decoration-line: underline;
+}
+
+/*Mis Publicaciones*/
+
+.contenedorPublicaciones{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  flex-direction: column;
+}
+
+.recuadro{
+  width: 80%;
+  height: 30vh;
+  border: 3px solid rgb(3, 218, 218);
+  border-radius: 30px ;
+  display: flex;
+
+}
+
+.ïmagen{
+  display: flex;
+}
+
+.ïmagen img{
+  width: 17em;
+}
+
+.tabla{
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.tabla table{
+  text-align: center;
+  
+}
+
+td{
+  padding-right: 1vw;
+  width: 30vw;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2em;
+  
+}
+.editar{
+  margin-bottom: 2em;
+
+
+}
+
+Button{
+  width: 8vw;
+  background-color: rgb(125, 205, 239);
+}
+
+.agregarPublicacion{
+  margin: 3rem;
+}
+
+.btnMas{
+  width: 5vw;
+  height: 10vh;
+  background-color: rgb(125, 205, 239);
+  border: 1px solid rgb(125, 205, 239);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 60px;
+  padding: 0;
+  justify-content: center;
 }
