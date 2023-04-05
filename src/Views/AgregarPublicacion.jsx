@@ -1,8 +1,5 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Figure from 'react-bootstrap/Figure';
-import Stack from 'react-bootstrap/Stack';
-import InputGroup from 'react-bootstrap/InputGroup';
+import {Button, Form, Figure, Stack, InputGroup} from 'react-bootstrap';
+
 
 function AgregarPublicacion() {
   return (
@@ -12,13 +9,17 @@ function AgregarPublicacion() {
       <Form className='formulario'>
 
         <Figure style={{display: " flex", alignItems:"center", flexDirection: "column" }} >
+          
           <Figure.Image
+          className='subirfoto'
             width={171}
             height={180}
             alt="171x180"
             src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8MzM4MDg3fGltYWdlL3BuZ3xoMGYvaGY3LzE0MDcwNjc0NzE4NzUwLnBuZ3xiMDUwZmMyMGMxODkxY2JkNTdhMjZmMWM1YWY1NWZmYTllMTg4Y2E1NGFjMjMzMjRkZjQ1YjA1ZjA3YTFjMThi"
           />
-          <Form.Group className="position-relative mb-3">
+          
+       
+          <Form.Group >
             
             <Form.Control
               type="file"

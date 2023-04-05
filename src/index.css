@@ -57,24 +57,38 @@ code {
   background-color: #2f3d4d;
   color: white;
   border-radius: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .fondoFormulario {
   display: flex;
   justify-content: center;
   background-color: rgba(191, 232, 249, 0.804);
-  height: 82vh;
+  
 }
 
 .caja {
-  width: 300px;
+  width: 376px;
   margin-bottom: 15px;
 }
+
+@media screen and (max-width: 500px) {
+  .caja {
+    width: auto;
+  margin-bottom: 15px;
+}}
 
 .boton {
   margin-bottom: 10px;
   background-color: #56d1c8 !important;
   color: black !important;
+}
+
+.subirfoto {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .olvidarcontraseña {
@@ -151,7 +165,7 @@ code {
   align-items: center;
 }
 
-/Usuario/
+Usuario/
 
 .Container{
 display: flex;
