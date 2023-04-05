@@ -1,10 +1,6 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import {Container, Nav, Navbar, NavDropdown, Form, Button} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+
 
 function SubMenu() {
   return (
@@ -32,7 +28,7 @@ function SubMenu() {
                   className="me-2"
                   aria-label="Buscar"
                 />
-                <Button variant="outline-success">Buscar</Button>
+                <Button variant="outline-info" className="btn-buscar">Buscar</Button>
               </Form>
             </Nav>
           </Navbar.Collapse>

@@ -1,11 +1,10 @@
 import React from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InicioSesion from "./Views/InicioSesion";
 import Registro from "./Views/Registro";
-
 import Logo from "./Components/Logo";
-
 import Footer from "./Components/Footer";
 import AgregarPublicacion from "./Views/AgregarPublicacion";
 import MarketPublico from "./Views/MarketPublico";
@@ -16,8 +15,11 @@ import Detalle from "./Views/Detalle";
 
 
 function App() {
+
+
   return (
     <div className="App">
+ 
       <BrowserRouter>
       <Logo></Logo>
       
