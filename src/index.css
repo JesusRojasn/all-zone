@@ -6,8 +6,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  padding-bottom: 6em;
+  min-height: 100vh;
 }
 
 code {
@@ -28,53 +29,106 @@ code {
   margin: 50px;
 }
 
-.logoFooter {
-  max-width: 100px;
-}
-
 .footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: #2f3d4d;
   color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+.texto-footer {
+  display: flex;
+}
+
+.text-footer{
+  padding-left: 20px;
 }
 
 .logosRRSS {
-  max-width: 50px;
-  padding: 5px;
-  margin: 25px;
+  width: 30px;
+  padding-bottom: 10px;
+  
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  height: 20rem;
-  width: 40rem;
+  width: 500px;
+  margin: 50px;
   background-color: #2f3d4d;
-  border-radius: 20px;
-  padding-top: 2rem;
+  color: white;
+  border-radius: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
-.formulario1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 15rem;
-}
+
 .fondoFormulario {
   display: flex;
-  background-color: #7dcdef;
-  height: 100vh;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: stretch;
-  padding-top: 15px;
+  justify-content: center;
+  
+  background-image: url(./Assets/img/fondo.jpg);
+  
+  
 }
-.OlvideContraseña {
+
+.caja {
+  width: 376px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .caja {
+    width: auto;
+  margin-bottom: 15px;
+}}
+
+.boton {
+  margin-bottom: 10px;
+  background-color: #56d1c8 !important;
+  color: black !important;
+}
+
+.btn-publicar{
+  margin-right: 10px;
+  background-color: #56d1c8 !important;
+  color: black !important;
+}
+
+.btn-cancelar{
+  border-color: #56d1c8 !important ;
+  color: #56d1c8 !important 
+}
+
+.subirfoto {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.olvidarcontraseña {
+  text-decoration: underline;
+}
+
+.container-AgregarPublicacion {
   display: flex;
-  padding-left: 25rem;
-  padding-top: 5rem;
+  flex-direction: column;
+
+  background-color: #2f3d4d;
 }
-<<<<<<< Updated upstream
-=======
+.detail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
 .detail {
   display: flex;
   flex-direction: column;
@@ -196,6 +250,7 @@ justify-content: center;
   font-size: x-large;
 }
 
+
 .camposUsuario{
   display: flex;
   justify-content: center;
@@ -288,4 +343,3 @@ Button{
   padding: 0;
   justify-content: center;
 }
->>>>>>> Stashed changes

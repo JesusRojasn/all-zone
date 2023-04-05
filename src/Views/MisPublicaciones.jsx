@@ -1,9 +1,4 @@
 import React from "react";
-<<<<<<< Updated upstream
-
-const MisPublicaciones = () => {
-  return <div>MisPublicaciones</div>;
-=======
 import SubMenuPriv from "../Components/SubMenupriv";
 import { Button } from "react-bootstrap";
 
@@ -76,7 +71,6 @@ const MisPublicaciones = () => {
       </div>
     </div>
   );
->>>>>>> Stashed changes
 };
 
 export default MisPublicaciones;

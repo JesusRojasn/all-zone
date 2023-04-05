@@ -1,52 +1,36 @@
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import { Button } from "react-bootstrap";
 
-function PlaintextExample() {
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
+function Registro() {
   return (
-    <div className="fondoFormulario">
-      <Navbar expand="lg">
-        <Container expand="lg">
-          <NavLink to="/">
-            <img
-              className="logo"
-              src="https://allzone.es/img/just-deal-logo-1604397301.jpg"
-              alt="logo"
-            />
-          </NavLink>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto"></Nav>
+    <div className='fondoFormulario'>
+    <Form className='formulario'>
+    <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Label>Nombre de usuario</Form.Label>
+        <Form.Control type="text" placeholder="" />
+      </Form.Group>
 
-            <Nav className="menu-opciones">
-              <NavLink to="/">Marketplace</NavLink>
-              <NavLink to="/inicioSesion">Iniciar Sesion</NavLink>
-              <NavLink to="/registro">Registro</NavLink>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" placeholder="xxxx@mail.com" />
+      </Form.Group>
 
-      <div className="formulario1">
-        <div className="formulario">
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="Correo" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Control type="password" placeholder="Contraseña" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-          <h6 className="OlvideContraseña">Olvide mi Contraseña</h6>
-        </div>
+      <Form.Group className="caja" controlId="formGroupPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="*******" />
+      </Form.Group>
+      <div>
+        <Button className='boton'>Crear Cuenta</Button>{' '}
       </div>
+      
+    </Form>
+    
+
     </div>
   );
 }
 
-export default PlaintextExample;
+export default Registro;
+

@@ -1,0 +1,153 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  padding-bottom: 6em;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.logo {
+  width: 200px;
+  margin-right: 100px;
+}
+
+.d-block {
+  max-height: 380px;
+}
+
+.cards {
+  margin: 50px;
+}
+
+.logoFooter {
+  max-width: 100px;
+}
+
+.footer {
+  background-color: #2f3d4d;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.logosRRSS {
+  max-width: 50px;
+  padding: 5px;
+  margin: 25px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 50px;
+  background-color: #2f3d4d;
+  color: white;
+  border-radius: 30px;
+}
+
+.fondoFormulario {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(191, 232, 249, 0.804);
+  height: 82vh;
+}
+
+.caja {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.boton {
+  margin-bottom: 10px;
+  background-color: #56d1c8 !important;
+  color: black !important;
+}
+
+.olvidarcontraseña {
+  text-decoration: underline;
+}
+
+.container-AgregarPublicacion {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #2f3d4d;
+}
+.detail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  justify-content: center;
+}
+.detail > * {
+  margin-bottom: 20px;
+}
+.buttons button {
+  padding: 0.5rem;
+  width: auto;
+  border-radius: 15px;
+  border: 0.1px solid black;
+  cursor: pointer;
+}
+.botonvolver {
+  background-color: #ff5757;
+  font-weight: 600;
+}
+.botonvolver:hover {
+  background-color: rgb(255, 30, 30);
+}
+.botonvermas {
+  background-color: #56d1c8;
+  font-weight: 600;
+}
+.botonvermas:hover {
+  background-color: #00c0b3;
+}
+
+.Menu {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding-left: 0.5em;
+  color: #2f3d4d;
+}
+
+.Menu:hover {
+  color: #ff5757;
+}
+.viewActiva {
+  color: #ff5757;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding-left: 0.5em;
+}
+.viewActiva:hover {
+  color: #ff5757;
+}
+
+.Figure img{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
