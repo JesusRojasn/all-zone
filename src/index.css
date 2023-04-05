@@ -29,11 +29,11 @@ code {
   margin: 50px;
 }
 
-.logoFooter {
-  max-width: 100px;
-}
-
 .footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: #2f3d4d;
   color: white;
   position: absolute;
@@ -41,10 +41,20 @@ code {
   width: 100%;
 }
 
+
+
+.texto-footer {
+  display: flex;
+}
+
+.text-footer{
+  padding-left: 20px;
+}
+
 .logosRRSS {
-  max-width: 50px;
-  padding: 5px;
-  margin: 25px;
+  width: 30px;
+  padding-bottom: 10px;
+  
 }
 
 .formulario {
@@ -64,7 +74,9 @@ code {
 .fondoFormulario {
   display: flex;
   justify-content: center;
-  background-color: rgba(191, 232, 249, 0.804);
+  
+  background-image: url(./Assets/img/fondo.jpg);
+  
   
 }
 
@@ -83,6 +95,17 @@ code {
   margin-bottom: 10px;
   background-color: #56d1c8 !important;
   color: black !important;
+}
+
+.btn-publicar{
+  margin-right: 10px;
+  background-color: #56d1c8 !important;
+  color: black !important;
+}
+
+.btn-cancelar{
+  border-color: #56d1c8 !important ;
+  color: #56d1c8 !important 
 }
 
 .subirfoto {
