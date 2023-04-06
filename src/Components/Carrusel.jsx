@@ -8,7 +8,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://www.loginstore.com/imagenes/banner-superior-laptops-notebooks-ofertas-2.jpg"
+            src="http://localhost:3000/banner1.png"
             alt="First slide"
           />
           <Carousel.Caption></Carousel.Caption>
@@ -16,7 +16,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://tecstore.pe/media/TEC_Banner-Web_Categoria_CELULARES.jpg"
+            src="http://localhost:3000/banner2.png"
             alt="Second slide"
           />
 
@@ -25,7 +25,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://tecnoshop.com.bo/wp-content/uploads/2022/07/Banner-Televisores.png"
+            src="http://localhost:3000/banner3.png"
             alt="Third slide"
           />
 

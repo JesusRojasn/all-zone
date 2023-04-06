@@ -12,7 +12,7 @@ function Logo() {
         <NavLink to="/">
           <img
             className="logo"
-            src="https://allzone.es/img/just-deal-logo-1604397301.jpg"
+            src="http://localhost:3000/logo-allzone.jpg"
             alt="logo"
           />
         </NavLink>
