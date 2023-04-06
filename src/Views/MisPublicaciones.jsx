@@ -60,7 +60,7 @@ const MisPublicaciones = () => {
                 <strong> ELIMINAR </strong>
               </Button>
             </div>
-            <div className=""></div>
+            
           </div>
         </div>
 
