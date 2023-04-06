@@ -1,6 +1,7 @@
 import React from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
 import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const MisPublicaciones = () => {
   return (
@@ -63,11 +64,11 @@ const MisPublicaciones = () => {
           </div>
         </div>
 
-        <div className="agregarPublicacion">
-          <div className="btnMas">
+        <NavLink to="/publicar" className="agregarPublicacion">
+          <Button variant="secondary" className="btnMas">
             <strong>+</strong>
-          </div>
-        </div>
+          </Button>
+        </NavLink>
       </div>
     </div>
   );
