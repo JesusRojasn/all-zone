@@ -26,9 +26,7 @@ function Cards() {
           
              
               <Card className=""
-              style={{
-                height: "55vh"
-                }}
+              
               >
                 
                 <Card.Img key={p.ID}
