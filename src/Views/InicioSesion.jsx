@@ -18,7 +18,7 @@ function InicioSesion() {
           <Form.Control type="password" placeholder="*******" />
         </Form.Group>
 
-        <Button className='boton'>Iniciar Sesión</Button>{' '}
+        <Button variant="secondary" className='btn-publicar'>Iniciar Sesión</Button>{' '}
 
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
           <Col sm={{ span: 10, offset: 2 }}>
