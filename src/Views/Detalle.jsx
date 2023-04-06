@@ -6,8 +6,8 @@ import MyContext from "../contexts/MyContext";
 
 function  Detalle () {
 
-  const {ID} = useParams();
-  const {productos} = useContext(MyContext);
+  const { ID } = useParams();
+  const { productos } = useContext(MyContext);
 
    // Buscamos el producto con el id correspondiente
   const productoDetalle = productos.find(p => p.ID === ID);
@@ -16,10 +16,11 @@ function  Detalle () {
   
   // Si no existe el producto, mostramos un mensaje de error
   if (!productoDetalle) {
-    return   <div>
+    return (   <div>
     <h1>Producto no encontrado!</h1>
-    {/* Resto del contenido del componente */}
-  </div>;
+    
+  </div>
+  )
   }
 
   // Si existe el producto, mostramos su información
