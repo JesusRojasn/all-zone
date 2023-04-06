@@ -65,8 +65,8 @@ const MisPublicaciones = () => {
         </div>
 
         <NavLink to="/publicar" className="agregarPublicacion">
-          <Button variant="secondary" className="btnMas">
-            <strong>+</strong>
+          <Button variant="secondary" className="btn-publicar">
+            Nueva Publicacion
           </Button>
         </NavLink>
       </div>

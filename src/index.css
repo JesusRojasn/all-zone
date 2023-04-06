@@ -39,6 +39,9 @@ code {
   border-radius: 5%;
 }
 
+/*footer*/
+
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -97,10 +100,151 @@ code {
 }
 
 @media screen and (max-width: 500px) {
+
+  .logo {
+    width:auto;
+  }
+
   .caja {
     width: auto;
-  margin-bottom: 15px;
-}}
+  margin-bottom: 15px;}
+
+
+  .btn-publicar {
+    width: auto;
+  margin-bottom: auto;
+
+  }
+
+  .btn-cancelar{
+    width: auto;
+    margin-bottom: auto;
+  }
+
+  .detail-container{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .detail-container img{
+    height: 20vh;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    height: 90vh;
+  }
+
+  /*footer*/
+  .footer {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #2f3d4d;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
+.recuadro{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  
+  }
+
+
+  .tabla {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  }
+
+  .botones{
+    margin-bottom: 2em;
+  }
+
+
+
+
+
+}
+
+.ïmagen{
+  display: flex;
+}
+
+.ïmagen img{
+  width: 17em;
+}
+
+.tabla{
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.tabla table{
+  text-align: center;
+  
+}
+
+td{
+  padding-right: 1vw;
+  width: 30vw;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2em;
+  
+}
+.editar{
+  margin-bottom: 2em;
+
+
+}
+
+Button{
+  width: 8vw;
+  background-color: rgb(125, 205, 239);
+}
+
+.agregarPublicacion{
+  margin: 3rem;
+}
+
+.btnMas{
+  width: 5vw;
+  height: 10vh;
+  background-color: rgb(125, 205, 239);
+  border: 1px solid rgb(125, 205, 239);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 60px;
+  padding: 0;
+  justify-content: center;
+}
+
+  
+
 
 .boton {
   margin-bottom: 10px;
@@ -113,6 +257,8 @@ code {
   background-color: #56d1c8 !important;
   color: black !important;
 }
+
+
 
 .btn-cancelar{
   border-color: #56d1c8 !important ;
@@ -145,6 +291,7 @@ code {
   justify-content: center;
   margin-top: 5%;
 }
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -204,7 +351,7 @@ code {
   align-items: center;
 }
 
-Usuario/
+/*Usuario*/
 
 .Container{
 display: flex;
@@ -269,7 +416,7 @@ justify-content: center;
 
 .camposUsuario{
   display: flex;
-  justify-content: center;
+  justify-content: center;
 
 }
 
@@ -291,12 +438,12 @@ text-decoration-line: underline;
 }
 
 .recuadro{
-  width: 80%;
-  height: 30vh;
+  width: auto;
+  height: auto;
   border: 3px solid rgb(3, 218, 218);
   border-radius: 30px ;
   display: flex;
-
+  margin: 20px;
 }
 
 .ïmagen{
