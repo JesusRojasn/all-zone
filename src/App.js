@@ -47,7 +47,7 @@ function App() {
             <Route path="/usuario" element={<Usuario></Usuario>}></Route>
             <Route path="/MisPublicaciones" element={<MisPublicaciones></MisPublicaciones>}></Route>
             
-            <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
+            <Route path="/detalle/:ID" element={<Detalle></Detalle>}></Route>
           </Routes>
           
           <Footer></Footer>
