@@ -22,7 +22,7 @@ function Registro() {
         <Form.Control type="password" placeholder="*******" />
       </Form.Group>
       <div>
-        <Button className='boton'>Crear Cuenta</Button>{' '}
+      <Button variant="secondary" className='btn-publicar'>Crear cuenta</Button>
       </div>
       
     </Form>

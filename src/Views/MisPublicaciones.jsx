@@ -60,13 +60,15 @@ const MisPublicaciones = () => {
                 <strong> ELIMINAR </strong>
               </Button>
             </div>
-            <div className=""></div>
+            
           </div>
         </div>
 
         <NavLink to="/publicar" className="agregarPublicacion">
           <Button variant="secondary" className="btn-publicar">
+
             Nueva Publicacion
+
           </Button>
         </NavLink>
       </div>
