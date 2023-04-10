@@ -33,14 +33,7 @@ const MisPublicaciones = () => {
             <div className="editar">
               <Button variant="secondary" className="btn-publicar"
                 
-                /*style={{
-                  height: "5vh",
-                  width: "8vw",
-                  borderRadius: "30% 30% 30% 30%",
-                  backgroundColor: "rgb(86,209, 200)",
-                  color: "black",
-                  border: "1px rgb(86,209, 200) ",
-                }}*/
+                
               >
                 <strong> EDITAR </strong>
               </Button>
@@ -48,14 +41,7 @@ const MisPublicaciones = () => {
             <div className="eliminar">
               <Button variant="outline-secondary" className="btn-cancelar"
                 
-                /* style={{
-                  height: "5vh",
-                  width: "8vw",
-                  borderRadius: "30% 30% 30% 30%",
-                  backgroundColor: "rgb(255,87, 87)",
-                  color: "black",
-                  border: "1px rgb(255,87, 87) ",
-                }} */
+                
               >
                 <strong> ELIMINAR </strong>
               </Button>
