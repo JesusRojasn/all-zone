@@ -2,7 +2,13 @@ import React from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
 import { Container } from "react-bootstrap";
 
+
 const Usuario = () => {
+
+
+
+
+
   return (
     <div>
       <SubMenuPriv></SubMenuPriv>
@@ -30,7 +36,7 @@ const Usuario = () => {
             </div>
             <div className="datosUsuario">
               <div className="nombre">
-                <p>Lorem.</p>
+                <p>{}.</p>
               </div>
 
               <div className="nombreUsuario">

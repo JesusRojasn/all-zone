@@ -1,9 +1,22 @@
+import { useContext } from "react";
 import {Container, Nav, Navbar, NavDropdown, Form, Button} from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import MyContext from "../contexts/MyContext";
 
 
 
-function SubMenuPriv() {
+const SubMenuPriv = () => {
+
+  const {setConectado} = useContext(MyContext);
+  const {navigate} = useNavigate();
+
+  const cerrarSesion= () => {
+
+    setConectado(false);
+    navigate('/');
+  }
+
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -53,6 +66,11 @@ function SubMenuPriv() {
             >
               Usuario
             </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")} 
+              to="/" onClick={() => cerrarSesion()}> Cerrar Sesion</NavLink>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

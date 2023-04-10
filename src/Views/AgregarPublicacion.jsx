@@ -1,4 +1,5 @@
 import { Button, Form, Figure, InputGroup } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 
 function AgregarPublicacion() {
@@ -25,8 +26,7 @@ function AgregarPublicacion() {
               type="file"
               required
               name="file"
-            //onChange={handleChange}
-            //isInvalid={!!errors.file}
+
             />
             <Form.Control.Feedback type="invalid" tooltip>
 
@@ -73,7 +73,10 @@ function AgregarPublicacion() {
 
         <div>
           <Button variant="secondary" className='btn-publicar'>Publicar</Button>
+
+          <NavLink to="/MisPublicaciones">
           <Button variant="outline-secondary" className='btn-cancelar'>Cancelar</Button>
+          </NavLink>
         </div>
 
       </Form>

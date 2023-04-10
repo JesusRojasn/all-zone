@@ -176,7 +176,14 @@ code {
     margin-bottom: 2em;
   }
 
-
+  .rutaNoValida{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25em;
+  }
 
 
 
@@ -517,4 +524,15 @@ Button{
 
 .homeContainerSuperior{
   margin-top: 2em;
+}
+
+/*Ruta no Valida*/
+
+.rutaNoValida{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
 }

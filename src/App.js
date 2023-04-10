@@ -1,6 +1,4 @@
-
-import React, { useEffect, useState } from "react";
-
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InicioSesion from "./Views/InicioSesion";
@@ -13,46 +11,43 @@ import MarketPrivado from "./Views/MarketPrivado";
 import Usuario from "./Views/Usuario";
 import MisPublicaciones from "./Views/MisPublicaciones";
 import Detalle from "./Views/Detalle";
-import MyContext from "./contexts/MyContext.jsx";
+import MyContext from "./contexts/MyContext";
+import RutaNoValida from "./Views/RutaNoValida";
 
 
 function App() {
 
-
-  const [productos, setProductos] = useState([]);
-
-  const getProductos = async () => {
-    const res = await fetch('http://localhost:3000/productos.json');
-    const data = await res.json();
-    setProductos(data);
-  };
+  const { conectado } = useContext(MyContext);
   
-
-  useEffect(() => {
-    getProductos();
-  }, []);
 
   return (
     <div className="App">
-      <MyContext.Provider value={{productos}}>
-        <BrowserRouter>
-        <Logo></Logo>
+      
+      <BrowserRouter>
+      <Logo></Logo>
 
-          <Routes>       
-            <Route path="/" element={<MarketPublico></MarketPublico>}></Route>   
-            <Route path="/registro" element={<Registro></Registro>}></Route>
-            <Route path="/InicioSesion" element={<InicioSesion></InicioSesion>}></Route>
-            <Route path="/publicar" element={<AgregarPublicacion></AgregarPublicacion>}></Route>
-            <Route path="/MarketPrivado" element={<MarketPrivado></MarketPrivado>}></Route>
-            <Route path="/usuario" element={<Usuario></Usuario>}></Route>
-            <Route path="/MisPublicaciones" element={<MisPublicaciones></MisPublicaciones>}></Route>
-            
-            <Route path="/detalle/:ID" element={<Detalle></Detalle>}></Route>
-          </Routes>
+        <Routes>
           
-          <Footer></Footer>
-        </BrowserRouter>
-      </MyContext.Provider>
+          <Route path="/" element={<MarketPublico></MarketPublico>}></Route> 
+          <Route path="/registro" element={<Registro></Registro>}></Route>
+          <Route path="/InicioSesion" element={<InicioSesion></InicioSesion>}></Route>   
+          <Route path="*" element={<RutaNoValida></RutaNoValida>}></Route>
+
+          {
+          conectado && 
+          <>
+          <Route path="/publicar" element={<AgregarPublicacion></AgregarPublicacion>}></Route>
+          <Route path="/MarketPrivado" element={<MarketPrivado></MarketPrivado>}></Route>
+          <Route path="/usuario" element={<Usuario></Usuario>}></Route>
+          <Route path="/MisPublicaciones" element={<MisPublicaciones></MisPublicaciones>}></Route>
+          <Route path="/detalle/:ID" element={<Detalle></Detalle>}></Route>
+          </>
+          }
+          
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
+
 
     </div>
   );
