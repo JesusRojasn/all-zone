@@ -19,7 +19,7 @@ export const ConstextoProvider = (props) => {
 
     //validacion de usuario
 
-  const [conectado, setConectado] = useState(false);
+  const [conectado, setConectado] = useState({});
 
     const lstUsuario=[
         {
