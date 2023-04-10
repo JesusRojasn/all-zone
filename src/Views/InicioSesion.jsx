@@ -21,7 +21,7 @@ const InicioSesion = () => {
     
 
     if(usuarioValido){
-      setConectado(true);
+      setConectado({estado: true,  email: validarUsuario.email });
       navigate('/marketPrivado');
     } else {
       setConectado(false);

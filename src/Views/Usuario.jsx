@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import SubMenuPriv from "../Components/SubMenupriv";
 import { Container } from "react-bootstrap";
+import MyContext from "../contexts/MyContext";
 
 
 const Usuario = () => {
 
 
+  const { conectado} = useContext(MyContext);
 
-
-
+ console.log(conectado);
   return (
     <div>
       <SubMenuPriv></SubMenuPriv>
@@ -36,7 +37,7 @@ const Usuario = () => {
             </div>
             <div className="datosUsuario">
               <div className="nombre">
-                <p>{}.</p>
+                <p><strong>{conectado.email}</strong></p>
               </div>
 
               <div className="nombreUsuario">
