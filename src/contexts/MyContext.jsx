@@ -8,7 +8,7 @@ export const ConstextoProvider = (props) => {
     const [productos, setProductos] = useState([]);
 
   const getProductos = async () => {
-    const res = await fetch(window.location.origin+'/productos.json');
+    const res = await fetch(window.location.origin+'/productos.json'); 
     const data = await res.json();
     setProductos(data);
   }; 
