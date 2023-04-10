@@ -9,7 +9,8 @@ import { useNavigate } from 'react-router-dom';
 function Registro() {
 
 
-  const [nombreUsuario, setNombreUsuario ] = useState ('');
+  const [nombre, setNombre ] = useState ('');
+  const [alias, setAlias ] = useState ('');
   const [email, setEmail ] = useState ('');
   const [password, setPassword ] = useState ('');
 
@@ -18,7 +19,7 @@ function Registro() {
 
   const registrarUsuario = () =>{
 
-    lstUsuario.push ({email:email, clave:password, alias:nombreUsuario});
+    lstUsuario.push ({email:email, clave:password, alias:alias, nombre:nombre});
     navigate('/InicioSesion');
 
   }
@@ -29,7 +30,12 @@ function Registro() {
     <Form className='formulario'>
     <Form.Group className="caja" controlId="formGroupEmail">
         <Form.Label>Nombre de usuario</Form.Label>
-        <Form.Control type="text" placeholder="" onChange={(e)=> setNombreUsuario(e.target.value)}/>
+        <Form.Control type="text" placeholder="" onChange={(e)=> setNombre(e.target.value)}/>
+      </Form.Group>
+
+      <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Label>Alias</Form.Label>
+        <Form.Control type="text" placeholder="" onChange={(e)=> setAlias(e.target.value)}/>
       </Form.Group>
 
       <Form.Group className="caja" controlId="formGroupEmail">
