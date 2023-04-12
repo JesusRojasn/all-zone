@@ -1,53 +1,42 @@
-import { Button, Form, Figure, InputGroup } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-
+import { Button, Form, Figure, InputGroup } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function AgregarPublicacion() {
   return (
-
-    <div className='fondoFormulario'>
-
-      <Form className='formulario'>
-
-        <Figure style={{ display: " flex", alignItems: "center", flexDirection: "column" }} >
-
+    <div className="fondoFormulario">
+      <Form className="formulario">
+        <Figure
+          style={{
+            display: " flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
           <Figure.Image
-            className='subirfoto'
+            className="subirfoto"
             width={171}
             height={180}
             alt="171x180"
             src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8MzM4MDg3fGltYWdlL3BuZ3xoMGYvaGY3LzE0MDcwNjc0NzE4NzUwLnBuZ3xiMDUwZmMyMGMxODkxY2JkNTdhMjZmMWM1YWY1NWZmYTllMTg4Y2E1NGFjMjMzMjRkZjQ1YjA1ZjA3YTFjMThi"
           />
 
-
-          <Form.Group >
-
-            <Form.Control
-              type="file"
-              required
-              name="file"
-
-            />
-            <Form.Control.Feedback type="invalid" tooltip>
-
-            </Form.Control.Feedback>
+          <Form.Group>
+            <Form.Control type="file" required name="file" />
+            <Form.Control.Feedback
+              type="invalid"
+              tooltip
+            ></Form.Control.Feedback>
           </Form.Group>
-
-
-
         </Figure>
-
 
         <Form.Group className="caja">
           <Form.Label>Nombre de producto</Form.Label>
           <Form.Control type="text" placeholder="" />
         </Form.Group>
 
-
         <Form.Group className="caja">
           <Form.Label>Descripción</Form.Label>
           <InputGroup>
-
             <Form.Control as="textarea" aria-label="With textarea" />
           </InputGroup>
         </Form.Group>
@@ -72,16 +61,17 @@ function AgregarPublicacion() {
         </Form.Group>
 
         <div>
-          <Button variant="secondary" className='btn-publicar'>Publicar</Button>
+          <Button variant="secondary" className="btn-publicar">
+            Publicar
+          </Button>
 
           <NavLink to="/MisPublicaciones">
-          <Button variant="outline-secondary" className='btn-cancelar'>Cancelar</Button>
+            <Button variant="outline-secondary" className="btn-cancelar">
+              Cancelar
+            </Button>
           </NavLink>
         </div>
-
       </Form>
-
-
     </div>
   );
 }

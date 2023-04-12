@@ -1,8 +1,18 @@
-import {Container, Nav, Navbar, NavDropdown, Form, Button} from "react-bootstrap";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+  Button,
+} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import MyContext from "../contexts/MyContext";
 
 function SubMenu() {
+  const { valorCaja, setValorBusqueda, setValorCaja } = useContext(MyContext);
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -27,8 +37,15 @@ function SubMenu() {
                   placeholder="Buscar"
                   className="me-2"
                   aria-label="Buscar"
+                  onChange={(e) => setValorCaja(e.target.value)}
                 />
-                <Button variant="outline-info" className="btn-buscar">Buscar</Button>
+                <Button
+                  variant="outline-info"
+                  className="btn-buscar"
+                  onClick={() => setValorBusqueda(valorCaja)}
+                >
+                  Buscar
+                </Button>
               </Form>
             </Nav>
           </Navbar.Collapse>
