@@ -4,12 +4,11 @@ import MyContext from "../contexts/MyContext";
 import { useContext } from "react";
 
 function Cards() {
-  const { productos, setConectado, conectado } = useContext(MyContext);
+  const { productos, conectado } = useContext(MyContext);
   const navigate = useNavigate();
 
   const irDetalle = (id) => {
     if (conectado) {
-      setConectado({ estado: true });
       navigate(`/Detalle/${id}`);
     } else {
       alert("Debes iniciar sesion");

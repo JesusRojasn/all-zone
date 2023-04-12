@@ -16,12 +16,12 @@ export const ConstextoProvider = (props) => {
     getProductos();
   }, []);
 
-  //validacion de usuario
-
   const [valorBusqueda, setValorBusqueda] = useState("");
+
   const [valorCaja, setValorCaja] = useState("");
 
-  const [conectado, setConectado] = useState({});
+  //validacion de usuario
+  const [conectado, setConectado] = useState(false);
 
   const lstUsuario = [
     {
