@@ -17,7 +17,7 @@ import RutaNoValida from "./Views/RutaNoValida";
 
 function App() {
 
-  const { conectado } = useContext(MyContext);
+  const { usuario } = useContext(MyContext);
   
 
   return (
@@ -34,7 +34,7 @@ function App() {
           <Route path="*" element={<RutaNoValida></RutaNoValida>}></Route>
 
           {
-          conectado && 
+          usuario.conectado && 
           <>
           <Route path="/publicar" element={<AgregarPublicacion></AgregarPublicacion>}></Route>
           <Route path="/MarketPrivado" element={<MarketPrivado></MarketPrivado>}></Route>

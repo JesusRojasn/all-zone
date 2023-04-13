@@ -19,7 +19,7 @@ export const ConstextoProvider = (props) => {
 
     //validacion de usuario
 
-  const [conectado, setConectado] = useState({});
+  const [usuario, setUsuario] = useState({});
 
     const lstUsuario=[
         {
@@ -43,7 +43,7 @@ export const ConstextoProvider = (props) => {
     ];
 
     return(
-        <MyContext.Provider value={{lstUsuario, productos, setConectado, conectado}}>
+        <MyContext.Provider value={{lstUsuario, productos, setUsuario, usuario}}>
             {props.children}
         </MyContext.Provider>
     )

@@ -7,9 +7,8 @@ import MyContext from "../contexts/MyContext";
 const Usuario = () => {
 
 
-  const { conectado} = useContext(MyContext);
-
- console.log(conectado);
+  const {usuario} = useContext(MyContext);
+  console.log(usuario);
   return (
     <div>
       <SubMenuPriv></SubMenuPriv>
@@ -37,7 +36,7 @@ const Usuario = () => {
             </div>
             <div className="datosUsuario">
               <div className="nombre">
-                <p><strong>{conectado.email}</strong></p>
+                <p><strong>{usuario.nombre}</strong></p>
               </div>
 
               <div className="nombreUsuario">

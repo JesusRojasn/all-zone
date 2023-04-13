@@ -7,29 +7,30 @@ import MyContext from '../contexts/MyContext';
 import { useNavigate } from 'react-router-dom';
 
 const InicioSesion = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const [email, setEmail] = useState ('');
-  const [password, setPassword] = useState ('');
-
-  const {lstUsuario, setConectado} =  useContext(MyContext)
+  const { lstUsuario, setUsuario, usuario} = useContext(MyContext);
   const navigate = useNavigate();
 
   //validacion de los datos de usuarios
 
   const validarUsuario = () => {
     const usuarioValido = lstUsuario.find((usuario) => usuario.email === email && usuario.clave === password);
-    
 
-    if(usuarioValido){
-      setConectado({estado: true,  email: validarUsuario.email });
+    if (usuarioValido) {
+      setUsuario({ conectado: true, email: usuarioValido.email, nombre: usuario.nombre, nombreUsuario: usuario.alias});
       navigate('/marketPrivado');
+      
     } else {
-      setConectado(false);
+      alert("Algun dato ingresado es incorrecto");
     }
-  }
 
+    console.log(usuario);
+  };
   
- //renderizado
+
+  //renderizado
   return (
     <div className='fondoFormulario'>
       <Form className='formulario'>
