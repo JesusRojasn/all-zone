@@ -10,7 +10,7 @@ const InicioSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { lstUsuario, setUsuario, usuario} = useContext(MyContext);
+  const { lstUsuario, setUsuario} = useContext(MyContext);
   const navigate = useNavigate();
 
   //validacion de los datos de usuarios
@@ -19,14 +19,17 @@ const InicioSesion = () => {
     const usuarioValido = lstUsuario.find((usuario) => usuario.email === email && usuario.clave === password);
 
     if (usuarioValido) {
-      setUsuario({ conectado: true, email: usuarioValido.email, nombre: usuario.nombre, nombreUsuario: usuario.alias});
+      setUsuario({ conectado: true, 
+                   email: usuarioValido.email, 
+                   nombre: usuarioValido.nombre, 
+                   nombreUsuario: usuarioValido.alias});
       navigate('/marketPrivado');
       
     } else {
       alert("Algun dato ingresado es incorrecto");
     }
 
-    console.log(usuario);
+    console.log(usuarioValido);
   };
   
 

@@ -10,8 +10,6 @@ import {
 import { NavLink } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
 
-
-
 const SubMenuPriv = () => {
   const { setConectado, valorCaja, setValorBusqueda, setValorCaja } =
     useContext(MyContext);
@@ -39,8 +37,15 @@ const SubMenuPriv = () => {
                   placeholder="Buscar"
                   className="me-2"
                   aria-label="Buscar"
+                  onChange={(e) => setValorCaja(e.target.value)}
                 />
-                <Button variant="outline-info" className="btn-buscar">Buscar</Button>
+                <Button
+                  variant="outline-info"
+                  className="btn-buscar"
+                  onClick={() => setValorBusqueda(valorCaja)}
+                >
+                  Buscar
+                </Button>
               </Form>
             </Nav>
           </Navbar.Collapse>
@@ -79,6 +84,6 @@ const SubMenuPriv = () => {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default SubMenuPriv;

@@ -8,7 +8,8 @@ const Usuario = () => {
 
 
   const {usuario} = useContext(MyContext);
-  console.log(usuario);
+
+ console.log(usuario);
   return (
     <div>
       <SubMenuPriv></SubMenuPriv>
@@ -40,11 +41,11 @@ const Usuario = () => {
               </div>
 
               <div className="nombreUsuario">
-                <p>Lorem.</p>
+                <p><strong>{usuario.nombreUsuario}</strong></p>
               </div>
 
               <div className="correo">
-                <p>example@example.com</p>
+                <p><strong>{usuario.email}</strong></p>
               </div>
             </div>
           </div>
