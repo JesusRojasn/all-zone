@@ -13,18 +13,21 @@ import MisPublicaciones from "./Views/MisPublicaciones";
 import Detalle from "./Views/Detalle";
 import MyContext from "./contexts/MyContext";
 import RutaNoValida from "./Views/RutaNoValida";
+import LogoPriv from "./Components/LogoPriv";
+
 
 
 function App() {
 
-  const { conectado } = useContext(MyContext);
+  const { usuario } = useContext(MyContext);
   
 
   return (
     <div className="App">
       
       <BrowserRouter>
-      <Logo></Logo>
+
+      {usuario.conectado ? <LogoPriv></LogoPriv> : <Logo></Logo>}
 
         <Routes>
           
@@ -32,9 +35,10 @@ function App() {
           <Route path="/registro" element={<Registro></Registro>}></Route>
           <Route path="/InicioSesion" element={<InicioSesion></InicioSesion>}></Route>   
           <Route path="*" element={<RutaNoValida></RutaNoValida>}></Route>
+          <Route path="/MarketPublico" element={<MarketPublico></MarketPublico>}></Route>
 
           {
-          conectado && 
+          usuario.conectado && 
           <>
           <Route path="/publicar" element={<AgregarPublicacion></AgregarPublicacion>}></Route>
           <Route path="/MarketPrivado" element={<MarketPrivado></MarketPrivado>}></Route>

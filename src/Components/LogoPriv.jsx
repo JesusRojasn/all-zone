@@ -5,11 +5,11 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
-function Logo() {
+function LogoPriv() {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" >
       <Container fluid>
-        <NavLink to="/MarketPublico">
+        <NavLink to="/MarketPrivado">
           <img
             className="logo"
             src="http://localhost:3000/logo-allzone.jpg"
@@ -21,4 +21,4 @@ function Logo() {
   );
 }
 
-export default Logo;
+export default LogoPriv;

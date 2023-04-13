@@ -21,7 +21,7 @@ export const ConstextoProvider = (props) => {
   const [valorCaja, setValorCaja] = useState("");
 
   //validacion de usuario
-  const [conectado, setConectado] = useState(false);
+  const [usuario, setUsuario] = useState({});
 
   const lstUsuario = [
     {
@@ -49,8 +49,8 @@ export const ConstextoProvider = (props) => {
       value={{
         lstUsuario,
         productos,
-        setConectado,
-        conectado,
+        setUsuario,
+        usuario,
         valorBusqueda,
         setValorBusqueda,
         setValorCaja,
