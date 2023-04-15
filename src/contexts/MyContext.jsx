@@ -20,6 +20,13 @@ export const ConstextoProvider = (props) => {
 
   const [valorCaja, setValorCaja] = useState("");
 
+  const [valorFiltro, setValorFiltro] = useState("");
+
+  
+
+  const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"]
+    
+
   //validacion de usuario
   const [conectado, setConectado] = useState(false);
 
@@ -55,6 +62,9 @@ export const ConstextoProvider = (props) => {
         setValorBusqueda,
         setValorCaja,
         valorCaja,
+        valorFiltro,
+        setValorFiltro,
+        lstCategoria,
       }}
     >
       {props.children}
