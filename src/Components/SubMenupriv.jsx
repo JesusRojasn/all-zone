@@ -47,8 +47,17 @@ const SubMenuPriv = () => {
               aria-label="Buscar"
               value={valorCaja}
               onChange={(e) => setValorCaja(e.target.value)}
+              onInput={(e) => {
+                if (e.target.value === "") {
+                  setValorBusqueda("");
+                }
+              }}
             />
-            <Button variant="outline-info" className="btn-buscar" onClick={() => setValorBusqueda(valorCaja)}>
+            <Button
+              variant="outline-info"
+              className="btn-buscar"
+              onClick={() => setValorBusqueda(valorCaja)}
+            >
               Buscar
             </Button>
           </Form>
