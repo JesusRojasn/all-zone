@@ -41,18 +41,27 @@ function SubMenu() {
           </Nav>
 
           <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="me-2"
-              aria-label="Buscar"
-              value={valorCaja}
-              onChange={(e) => setValorCaja(e.target.value)}
-            />
-            <Button variant="outline-info" className="btn-buscar" onClick={() => setValorBusqueda(valorCaja)}>
-              Buscar
-            </Button>
-          </Form>
+  <Form.Control
+    type="search"
+    placeholder="Buscar"
+    className="me-2"
+    aria-label="Buscar"
+    value={valorCaja}
+    onChange={(e) => setValorCaja(e.target.value)}
+    onInput={(e) => {
+      if (e.target.value === "") {
+        setValorBusqueda("");
+      }
+    }}
+  />
+  <Button
+    variant="outline-info"
+    className="btn-buscar"
+    onClick={() => setValorBusqueda(valorCaja)}
+  >
+    Buscar
+  </Button>
+</Form>
          
 
           <Nav className=" ms-auto menu-opciones">
