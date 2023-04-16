@@ -10,24 +10,34 @@ function Registro() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { lstUsuario } = useContext(MyContext);
+  const { lstUsuario, setLstUsuario } = useContext(MyContext);
   const navigate = useNavigate();
 
   const registrarUsuario = () => {
-    lstUsuario.push({
+    const nuevoUsuario = {
       email: email,
       clave: password,
       alias: alias,
       nombre: nombre,
-    });
-    alert("te registraste con exito");
+    };
+    setLstUsuario([...lstUsuario, nuevoUsuario]);
+    alert("Te registraste con éxito");
     navigate("/InicioSesion");
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (nombre !== "" && alias !== "" && email !== "" && password !== "") {
+      registrarUsuario();
+    } else {
+      alert("Por favor completa todos los campos");
+    }
   };
 
   return (
     <div className="fondoFormulario">
-      <Form className="formulario">
-        <Form.Group className="caja" controlId="formGroupEmail">
+      <Form className="formulario" onSubmit={handleSubmit}>
+        <Form.Group className="caja" controlId="formGroupText">
           <Form.Label>Nombre de usuario</Form.Label>
           <Form.Control
             type="text"
@@ -36,7 +46,7 @@ function Registro() {
           />
         </Form.Group>
 
-        <Form.Group className="caja" controlId="formGroupEmail">
+        <Form.Group className="caja" controlId="formGroupAlias">
           <Form.Label>Alias</Form.Label>
           <Form.Control
             type="text"
@@ -63,11 +73,7 @@ function Registro() {
           />
         </Form.Group>
         <div>
-          <Button
-            variant="secondary"
-            className="btn-publicar"
-            onClick={() => registrarUsuario()}
-          >
+          <Button type="submit" variant="secondary" className="btn-publicar">
             Crear cuenta
           </Button>
         </div>

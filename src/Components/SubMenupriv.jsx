@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
 
 const SubMenuPriv = () => {
-  const { setConectado, valorCaja, setValorBusqueda, setValorCaja, lstCategoria, valorFiltro, setValorFiltro } =
+  const { valorCaja, setValorBusqueda, setValorCaja, lstCategoria, valorFiltro, setValorFiltro, setUsuario } =
     useContext(MyContext);
 
     const handleSelect = (eventKey) => {
@@ -87,7 +87,7 @@ const SubMenuPriv = () => {
             <NavLink
               className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
               to="/"
-              onClick={() => setConectado(false)}
+              onClick={() => setUsuario(false)}
             >
               {" "}
               Cerrar Sesion

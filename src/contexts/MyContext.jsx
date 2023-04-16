@@ -22,15 +22,16 @@ export const ConstextoProvider = (props) => {
 
   const [valorFiltro, setValorFiltro] = useState("");
 
+
   
 
   const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"]
     
 
   //validacion de usuario
-  const [usuario, setUsuario] = useState({});
+  const [usuario, setUsuario] = useState(false);
 
-  const lstUsuario = [
+  const [lstUsuario, setLstUsuario] = useState ([
     {
       nombre: "Consuelo Araya",
       alias: "carayao",
@@ -49,12 +50,13 @@ export const ConstextoProvider = (props) => {
       email: "f",
       clave: "f",
     },
-  ];
+  ]);
 
   return (
     <MyContext.Provider
       value={{
         lstUsuario,
+        setLstUsuario,
         productos,
         setUsuario,
         usuario,
