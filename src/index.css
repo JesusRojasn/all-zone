@@ -39,6 +39,20 @@ code {
   border-radius: 5%;
 }
 
+.custom-modal .modal-content {
+  background-color: rgba(21, 21, 49, 0.719); 
+  color: white;
+  border: none; 
+  box-shadow: none; 
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  background-color: transparent; 
+  border: none; 
+}
+
+
 /*footer*/
 
 
@@ -236,33 +250,10 @@ Button{
   margin: 3rem;
 }
 
-.btnMas{
-  width: 5vw;
-  height: 10vh;
-  background-color: rgb(125, 205, 239);
-  border: 1px solid rgb(125, 205, 239);
-  border-radius: 50%;
-  display: flex;
-  align-items: flex-start;
-  margin: 0;
-  font-size: 60px;
-  padding: 0;
-  justify-content: center;
-}
-
-  
-
-
-.boton {
-  margin-bottom: 10px;
-  background-color: #56d1c8 !important;
-  color: black !important;
-}
-
 .btn-publicar{
   margin-right: 10px;
-  background-color: #56d1c8 !important;
-  color: black !important;
+  background-color: #2f3d4d !important;
+  color: white !important;
 }
 
 

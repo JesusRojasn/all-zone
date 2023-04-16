@@ -4,7 +4,7 @@ import MyContext from "../contexts/MyContext";
 import { useContext, useState, useEffect } from "react";
 
 function Cards() {
-  const { productos, conectado } = useContext(MyContext);
+  const { productos } = useContext(MyContext);
   const navigate = useNavigate();
 
   const [productosMostrados, setProductosMostrados] = useState(productos);
@@ -27,14 +27,16 @@ function Cards() {
     setProductosMostrados(nuevosProductos);
   }, [valorFiltro, valorBusqueda, productos]);
 
-  
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
 
   const irDetalle = (id) => {
     if (usuario) {
       navigate(`/Detalle/${id}`);
     } else {
-      alert("Debes iniciar sesion");
-      navigate("/");
+      handleShow();
     }
   };
 
@@ -68,12 +70,27 @@ function Cards() {
             );
           })}
         </div>
+        <Modal show={showModal} onHide={handleClose} className="custom-modal">
+          <Modal.Header closeButton> 
+            <Modal.Title>Iniciar sesión</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Debes resgistrarte o iniciar sesión para ver más detalles.</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" className="btn-publicar" onClick={() => navigate("/registro")}>
+              Registrase
+            </Button>
+            <Button variant="primary" className="btn-publicar" onClick={() => navigate("/InicioSesion")}>
+              Iniciar sesión
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </div>
   );
 }
 
 export default Cards;
+
 
 
 
