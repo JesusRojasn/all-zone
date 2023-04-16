@@ -1,4 +1,4 @@
-import { Container, Button, Card } from "react-bootstrap";
+import { Container, Button, Card, Modal} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
 import { useContext, useState, useEffect } from "react";
@@ -8,7 +8,7 @@ function Cards() {
   const navigate = useNavigate();
 
   const [productosMostrados, setProductosMostrados] = useState(productos);
-  const { valorBusqueda, valorFiltro, setValorFiltro, setValorBusqueda, setValorCaja, valorCaja} = useContext(MyContext);
+  const { valorBusqueda, valorFiltro, setValorFiltro, usuario} = useContext(MyContext);
 
   useEffect(() => {
     let nuevosProductos = productos;
@@ -30,7 +30,7 @@ function Cards() {
   
 
   const irDetalle = (id) => {
-    if (conectado) {
+    if (usuario) {
       navigate(`/Detalle/${id}`);
     } else {
       alert("Debes iniciar sesion");
