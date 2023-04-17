@@ -33,7 +33,8 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setNombre(e.target.value)}
-          />
+            required isInvalid={!nombre}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupEmail">
@@ -42,7 +43,8 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setAlias(e.target.value)}
-          />
+            required isInvalid={!alias}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupEmail">
@@ -51,7 +53,8 @@ function Registro() {
             type="email"
             placeholder="xxxx@mail.com"
             onChange={(e) => setEmail(e.target.value)}
-          />
+            required isInvalid={!email}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupPassword">
@@ -60,7 +63,8 @@ function Registro() {
             type="password"
             placeholder="*******"
             onChange={(e) => setPassword(e.target.value)}
-          />
+            required isInvalid={!password}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
         <div>
           <Button

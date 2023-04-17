@@ -162,6 +162,7 @@ code {
   width: auto;
   height: auto;
   
+  
   }
 
 
@@ -188,6 +189,7 @@ code {
 
 
 }
+/*Mis publicaciones */
 
 .ïmagen{
   display: flex;
@@ -218,13 +220,9 @@ td{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 2em;
+  position: relative;
+  margin: 1em;
   
-}
-.editar{
-  margin-bottom: 2em;
-
-
 }
 
 Button{

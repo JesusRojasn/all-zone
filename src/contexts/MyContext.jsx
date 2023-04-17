@@ -44,9 +44,17 @@ export const ConstextoProvider = (props) => {
     },
   ];
 
+ const lstProducto = [
+  
+ ]
+
+
+
+
   return (
     <MyContext.Provider
       value={{
+        lstProducto,
         lstUsuario,
         productos,
         setUsuario,
