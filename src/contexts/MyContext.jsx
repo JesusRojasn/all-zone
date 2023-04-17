@@ -20,10 +20,18 @@ export const ConstextoProvider = (props) => {
 
   const [valorCaja, setValorCaja] = useState("");
 
-  //validacion de usuario
-  const [usuario, setUsuario] = useState({});
+  const [valorFiltro, setValorFiltro] = useState("");
 
-  const lstUsuario = [
+
+  
+
+  const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"]
+    
+
+  //validacion de usuario
+  const [usuario, setUsuario] = useState(false);
+
+  const [lstUsuario, setLstUsuario] = useState ([
     {
       nombre: "Consuelo Araya",
       alias: "carayao",
@@ -42,7 +50,7 @@ export const ConstextoProvider = (props) => {
       email: "f",
       clave: "f",
     },
-  ];
+  ]);
 
  const lstProducto = [
   
@@ -56,6 +64,7 @@ export const ConstextoProvider = (props) => {
       value={{
         lstProducto,
         lstUsuario,
+        setLstUsuario,
         productos,
         setUsuario,
         usuario,
@@ -63,6 +72,9 @@ export const ConstextoProvider = (props) => {
         setValorBusqueda,
         setValorCaja,
         valorCaja,
+        valorFiltro,
+        setValorFiltro,
+        lstCategoria,
       }}
     >
       {props.children}

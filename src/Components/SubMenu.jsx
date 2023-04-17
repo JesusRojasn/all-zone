@@ -7,50 +7,64 @@ import {
   Button,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import MyContext from "../contexts/MyContext";
 
 function SubMenu() {
-  const { valorCaja, setValorBusqueda, setValorCaja } = useContext(MyContext);
 
-  return (
-    <Navbar expand="lg">
-      <Container>
+
+  const { valorCaja, setValorBusqueda, setValorCaja, lstCategoria, setValorFiltro, valorFiltro } = useContext(MyContext);
+
+ const handleSelect = (eventKey) => {
+  setValorFiltro(eventKey);
+ 
+   };
+
+   useEffect(() => {
+   setValorFiltro(`${valorFiltro}`)
+   }, [valorFiltro]);
+   console.log(valorFiltro)
+
+
+
+   return (
+    <Navbar expand="lg" bg="light" variant="light" sticky="top" fixed="top">
+      <Container fluid>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto Menu">
-            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Notebooks</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Celulares</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">Televisores</NavDropdown.Item>
+            <NavDropdown id="nav-dropdown-dark-example" title="Categorías" onSelect={handleSelect}>
+              <NavDropdown.Item eventKey={lstCategoria[0]}>{lstCategoria[0]}</NavDropdown.Item>
+              <NavDropdown.Item eventKey={lstCategoria[1]}>{lstCategoria[1]}</NavDropdown.Item>
+              <NavDropdown.Item eventKey={lstCategoria[2]}>{lstCategoria[2]}</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Buscar"
-                  className="me-2"
-                  aria-label="Buscar"
-                  onChange={(e) => setValorCaja(e.target.value)}
-                />
-                <Button
-                  variant="outline-info"
-                  className="btn-buscar"
-                  onClick={() => setValorBusqueda(valorCaja)}
-                >
-                  Buscar
-                </Button>
-              </Form>
-            </Nav>
-          </Navbar.Collapse>
+          <Form className="d-flex">
+  <Form.Control
+    type="search"
+    placeholder="Buscar"
+    className="me-2"
+    aria-label="Buscar"
+    value={valorCaja}
+    onChange={(e) => setValorCaja(e.target.value)}
+    onInput={(e) => {
+      if (e.target.value === "") {
+        setValorBusqueda("");
+      }
+    }}
+  />
+  <Button
+    variant="outline-info"
+    className="btn-buscar"
+    onClick={() => setValorBusqueda(valorCaja)}
+  >
+    Buscar
+  </Button>
+</Form>
+         
 
-          <Nav className="menu-opciones">
+          <Nav className=" ms-auto menu-opciones">
             <NavLink
               className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
               to="/inicioSesion"
@@ -70,5 +84,6 @@ function SubMenu() {
     </Navbar>
   );
 }
+
 
 export default SubMenu;

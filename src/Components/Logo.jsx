@@ -9,7 +9,7 @@ function Logo() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <NavLink to="/MarketPublico">
+        <NavLink to="/">
           <img
             className="logo"
             src="http://localhost:3000/logo-allzone.jpg"

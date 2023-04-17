@@ -39,6 +39,20 @@ code {
   border-radius: 5%;
 }
 
+.custom-modal .modal-content {
+  background-color: rgba(21, 21, 49, 0.719); 
+  color: white;
+  border: none; 
+  box-shadow: none; 
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  background-color: transparent; 
+  border: none; 
+}
+
+
 /*footer*/
 
 
@@ -76,12 +90,13 @@ code {
   justify-content: center;
   align-items: center;
   width: 500px;
-  margin: 50px;
+  margin: auto;
   background-color: #2f3d4d;
   color: white;
   border-radius: 30px;
   padding-bottom: 50px;
   padding-top: 50px;
+
 }
 
 .fondoFormulario {
@@ -90,6 +105,11 @@ code {
   background-image: url(./Assets/img/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
   padding: 10vh;
   
 }
@@ -173,9 +193,6 @@ code {
   margin-bottom: 2em;
   }
 
-  .botones{
-    margin-bottom: 2em;
-  }
 
   .rutaNoValida{
     display: flex;
@@ -215,6 +232,7 @@ td{
   width: 30vw;
 }
 
+
 .botones{
   display: flex;
   flex-direction: column;
@@ -223,51 +241,39 @@ td{
   position: relative;
   margin: 1em;
   
-}
 
-Button{
-  width: 8vw;
-  background-color: rgb(125, 205, 239);
+
+.editar{
+  margin-bottom: 2em;
+
+
+
 }
 
 .agregarPublicacion{
   margin: 3rem;
 }
 
-.btnMas{
-  width: 5vw;
-  height: 10vh;
-  background-color: rgb(125, 205, 239);
-  border: 1px solid rgb(125, 205, 239);
-  border-radius: 50%;
-  display: flex;
-  align-items: flex-start;
-  margin: 0;
-  font-size: 60px;
-  padding: 0;
-  justify-content: center;
-}
-
-  
-
-
-.boton {
-  margin-bottom: 10px;
-  background-color: #56d1c8 !important;
-  color: black !important;
-}
-
 .btn-publicar{
   margin-right: 10px;
-  background-color: #56d1c8 !important;
-  color: black !important;
+  background-color: #2f3d4d !important;
+  color: white !important;
 }
 
-
+.btn-publicar:hover {
+  /* estilo al pasar el mouse sobre el botón */
+  background-color: #17a2b8 !important; 
+  color: white !important;
+}
 
 .btn-cancelar{
   border-color: #56d1c8 !important ;
   color: #56d1c8 !important 
+}
+
+.btn-cerrar-modal{
+  border-color: #2f3d4d !important ;
+  color: white !important 
 }
 
 .btn-buscar{

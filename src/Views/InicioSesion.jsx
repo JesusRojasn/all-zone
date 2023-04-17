@@ -2,13 +2,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Modal from 'react-bootstrap/Modal';
 import { useContext, useState } from 'react';
 import MyContext from '../contexts/MyContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const InicioSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const { lstUsuario, setUsuario} = useContext(MyContext);
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const InicioSesion = () => {
       navigate('/marketPrivado');
       
     } else {
-      alert("Algun dato ingresado es incorrecto");
+      setShowModal(true);
     }
 
     console.log(usuarioValido);
@@ -50,10 +52,17 @@ const InicioSesion = () => {
             <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
-        <Button variant="secondary" className='btn-publicar' onClick={() => validarUsuario()}>Iniciar Sesión</Button>{' '}
+<div className='{row}'>
+        <NavLink to="/">
+              <Button variant="outline-secondary" className="btn-publicar">
+                Volver
+              </Button>
+            </NavLink>
 
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
-          <Col sm={{ span: 10, offset: 2 }}>
+        <Button variant="outline-info" className="btn-publicar" onClick={() => validarUsuario()}>Iniciar Sesión</Button>{' '}
+        </div>
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck" style={{marginTop:"20px"}}>
+          <Col sm={{ span: 4, offset: 2 }}>
             <Form.Check label="Recordar" />
           </Col>
         </Form.Group>
@@ -63,6 +72,19 @@ const InicioSesion = () => {
 
       </Form>
 
+      <Modal show={showModal} onHide={() => setShowModal(false)} className="custom-modal">
+        <Modal.Header closeButton>
+          <Modal.Title>Error</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Algun dato ingresado es incorrecto</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-info" className="btn-publicar" onClick={() => setShowModal(false)}>
+           Volver a intentar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
