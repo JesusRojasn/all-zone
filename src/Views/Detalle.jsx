@@ -35,7 +35,7 @@ function Detalle() {
           <h4> {productoDetalle.DESCRIPCION}</h4>
           <p>Vendedor: {productoDetalle.VENDEDOR}</p>
           <p>
-            Precio:<strong> ${productoDetalle.PRECIO}</strong>
+            Precio:<strong>{Number.parseFloat(productoDetalle.PRECIO).toLocaleString("es-AR", {style: "currency", currency: "ARS", minimumFractionDigits: 0, maximumFractionDigits: 0, useGrouping: true})}</strong>
           </p>
           <div>
             <NavLink to="/MarketPrivado">

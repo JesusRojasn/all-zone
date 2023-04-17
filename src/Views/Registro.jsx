@@ -3,15 +3,23 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import MyContext from "../contexts/MyContext";
 import { useNavigate } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 
 function Registro() {
   const [nombre, setNombre] = useState("");
   const [alias, setAlias] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [nombreVacio, setNombreVacio] = useState(false);
+  const [aliasVacio, setAliasVacio] = useState(false);
+  const [emailVacio, setEmailVacio] = useState(false);
+  const [passwordVacio, setPasswordVacio] = useState(false);
 
   const { lstUsuario, setLstUsuario } = useContext(MyContext);
   const navigate = useNavigate();
+
+  const handleCloseModal = () => setShowModal(false);
 
   const registrarUsuario = () => {
     const nuevoUsuario = {
@@ -21,8 +29,7 @@ function Registro() {
       nombre: nombre,
     };
     setLstUsuario([...lstUsuario, nuevoUsuario]);
-    alert("Te registraste con éxito");
-    navigate("/InicioSesion");
+    setShowModal(true);
   };
 
   const handleSubmit = (event) => {
@@ -30,7 +37,10 @@ function Registro() {
     if (nombre !== "" && alias !== "" && email !== "" && password !== "") {
       registrarUsuario();
     } else {
-      alert("Por favor completa todos los campos");
+      setNombreVacio(nombre === "");
+      setAliasVacio(alias === "");
+      setEmailVacio(email === "");
+      setPasswordVacio(password === "");
     }
   };
 
@@ -43,7 +53,13 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setNombre(e.target.value)}
+            isInvalid={nombreVacio}
           />
+          {nombreVacio && (
+            <Form.Control.Feedback type="invalid">
+              Faltan datos
+            </Form.Control.Feedback>
+          )}
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupAlias">
@@ -52,7 +68,13 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setAlias(e.target.value)}
+            isInvalid={aliasVacio}
           />
+          {aliasVacio && (
+            <Form.Control.Feedback type="invalid">
+              Faltan datos
+            </Form.Control.Feedback>
+          )}
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupEmail">
@@ -61,7 +83,13 @@ function Registro() {
             type="email"
             placeholder="xxxx@mail.com"
             onChange={(e) => setEmail(e.target.value)}
+            isInvalid={emailVacio}
           />
+          {emailVacio && (
+            <Form.Control.Feedback type="invalid">
+              Faltan datos
+            </Form.Control.Feedback>
+          )}
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupPassword">
@@ -70,7 +98,13 @@ function Registro() {
             type="password"
             placeholder="*******"
             onChange={(e) => setPassword(e.target.value)}
-          />
+            isInvalid={passwordVacio}
+            />
+            {passwordVacio && (
+              <Form.Control.Feedback type="invalid">
+                Faltan datos
+              </Form.Control.Feedback>
+            )}
         </Form.Group>
         <div>
           <Button type="submit" variant="secondary" className="btn-publicar">
@@ -78,6 +112,22 @@ function Registro() {
           </Button>
         </div>
       </Form>
+      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
+        <Modal.Header closeButton>
+          <Modal.Title>Registro Exitoso</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Tu cuenta ha sido creada con éxito. Ahora puedes iniciar sesión.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal} className="btn-cerrar">
+            Cerrar
+          </Button>
+          <Button variant="secondary" onClick={() => navigate("/InicioSesion")}className="btn-publicar">
+            Iniciar Sesión
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
