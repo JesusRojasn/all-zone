@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import MyContext from "../contexts/MyContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 
 function Registro() {
@@ -107,9 +107,15 @@ function Registro() {
             )}
         </Form.Group>
         <div>
-          <Button type="submit" variant="secondary" className="btn-publicar">
+        <NavLink to="/">
+              <Button variant="outline-info" className="btn-publicar">
+                Volver
+              </Button>
+            </NavLink>
+          <Button type="submit" variant="outline-info" className="btn-publicar">
             Crear cuenta
           </Button>
+          
         </div>
       </Form>
       <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
@@ -120,10 +126,10 @@ function Registro() {
           Tu cuenta ha sido creada con éxito. Ahora puedes iniciar sesión.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal} className="btn-cerrar">
+          <Button variant="secondary" onClick={handleCloseModal} className="btn-cerrar-modal">
             Cerrar
           </Button>
-          <Button variant="secondary" onClick={() => navigate("/InicioSesion")}className="btn-publicar">
+          <Button variant="outline-info" className="btn-publicar" onClick={() => navigate("/InicioSesion")}>
             Iniciar Sesión
           </Button>
         </Modal.Footer>

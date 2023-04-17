@@ -247,9 +247,20 @@ td{
   color: white !important;
 }
 
+.btn-publicar:hover {
+  /* estilo al pasar el mouse sobre el botón */
+  background-color: #17a2b8 !important; 
+  color: white !important;
+}
+
 .btn-cancelar{
   border-color: #56d1c8 !important ;
   color: #56d1c8 !important 
+}
+
+.btn-cerrar-modal{
+  border-color: #2f3d4d !important ;
+  color: white !important 
 }
 
 .btn-buscar{
