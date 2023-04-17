@@ -1,7 +1,34 @@
+import { useContext, useState } from "react";
 import { Button, Form, Figure, InputGroup } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import MyContext from "../contexts/MyContext";
 
 function AgregarPublicacion() {
+  const [imagen, setImagen] = useState("")
+  const [nombreProducto, setNombreProducto] = useState("");
+  const [descripcion, setDescripcion] = useState("");
+  const [categoria, setCategoria] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [marca, setMarca] = useState("");
+
+
+  const { lstProducto } = useContext(MyContext);
+  const navigate = useNavigate();
+
+  const registrarProducto = () => {
+    lstProducto.push({
+      imagen: imagen,
+      nombre: nombreProducto,
+      marca: marca,
+      descripcion: descripcion ,
+      categoria: categoria,
+      precio: precio,
+    });
+    navigate("/MisPublicaciones");
+  };
+
+
+
   return (
     <div className="fondoFormulario">
       <Form className="formulario">
@@ -13,15 +40,11 @@ function AgregarPublicacion() {
           }}
         >
           <Figure.Image
-            className="subirfoto"
-            width={171}
-            height={180}
-            alt="171x180"
-            src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8MzM4MDg3fGltYWdlL3BuZ3xoMGYvaGY3LzE0MDcwNjc0NzE4NzUwLnBuZ3xiMDUwZmMyMGMxODkxY2JkNTdhMjZmMWM1YWY1NWZmYTllMTg4Y2E1NGFjMjMzMjRkZjQ1YjA1ZjA3YTFjMThi"
+
           />
 
           <Form.Group>
-            <Form.Control type="file" required name="file" />
+            <Form.Control type="file"  name="file" onChange={(e) => setImagen(e.target.value)} required/>
             <Form.Control.Feedback
               type="invalid"
               tooltip
@@ -31,37 +54,49 @@ function AgregarPublicacion() {
 
         <Form.Group className="caja">
           <Form.Label>Nombre de producto</Form.Label>
-          <Form.Control type="text" placeholder="" />
+          <Form.Control type="text" placeholder="" onChange={(e) => setNombreProducto(e.target.value)} required isInvalid={!nombreProducto} />
+          <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group className="caja">
+          <Form.Label>Marca</Form.Label>
+          <InputGroup>
+            <Form.Control aria-label="With number" onChange={(e) => setMarca(e.target.value)} required isInvalid={!marca}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
+          </InputGroup>
         </Form.Group>
 
         <Form.Group className="caja">
           <Form.Label>Descripción</Form.Label>
           <InputGroup>
-            <Form.Control as="textarea" aria-label="With textarea" />
+            <Form.Control as="textarea" aria-label="With textarea" onChange={(e) => setDescripcion(e.target.value)}required isInvalid={!descripcion}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
 
         <Form.Group className="caja">
           <Form.Label>Categoría</Form.Label>
-          <Form.Select aria-label="Default select example">
-            <option>Selecciona categoría</option>
+          <Form.Select aria-label="Default select example" onChange={(e)=> setCategoria(e.target.value)} required isInvalid={!categoria}>
+            <option value="">Selecciona categoría</option>
             <option value="1">Notebooks</option>
             <option value="2">Celulares</option>
             <option value="3">Televisores</option>
           </Form.Select>
+          <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="caja">
           <Form.Label>Precio</Form.Label>
           <InputGroup className="mb-3">
             <InputGroup.Text>$</InputGroup.Text>
-            <Form.Control aria-label="Amount (to the nearest dollar)" />
+            <Form.Control type="number" aria-label="Amount (to the nearest dollar)" onChange={(e) => setPrecio(e.target.value)}required isInvalid={!precio}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
             <InputGroup.Text></InputGroup.Text>
           </InputGroup>
         </Form.Group>
 
         <div>
-          <Button variant="secondary" className="btn-publicar">
+          <Button variant="secondary" className="btn-publicar" onClick={() => registrarProducto()}>
             Publicar
           </Button>
 

@@ -42,12 +42,14 @@ const InicioSesion = () => {
 
         <Form.Group className="caja" controlId="formGroupEmail">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="example@mail.com" onChange={(e) => setEmail (e.target.value)} />
+          <Form.Control type="email" placeholder="example@mail.com" onChange={(e) => setEmail (e.target.value)} required isInvalid={!email}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="contraseña" onChange={(e) => setPassword (e.target.value)} />
+          <Form.Control type="password" placeholder="contraseña" onChange={(e) => setPassword (e.target.value)} required isInvalid={!password}/>
+            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
 
 <div className='{row}'>

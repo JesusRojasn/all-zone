@@ -53,6 +53,7 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setNombre(e.target.value)}
+
             isInvalid={nombreVacio}
           />
           {nombreVacio && (
@@ -60,6 +61,7 @@ function Registro() {
               Faltan datos
             </Form.Control.Feedback>
           )}
+
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupAlias">
@@ -68,6 +70,7 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setAlias(e.target.value)}
+
             isInvalid={aliasVacio}
           />
           {aliasVacio && (
@@ -75,6 +78,7 @@ function Registro() {
               Faltan datos
             </Form.Control.Feedback>
           )}
+
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupEmail">
@@ -83,6 +87,7 @@ function Registro() {
             type="email"
             placeholder="xxxx@mail.com"
             onChange={(e) => setEmail(e.target.value)}
+
             isInvalid={emailVacio}
           />
           {emailVacio && (
@@ -98,6 +103,7 @@ function Registro() {
             type="password"
             placeholder="*******"
             onChange={(e) => setPassword(e.target.value)}
+
             isInvalid={passwordVacio}
             />
             {passwordVacio && (
@@ -105,6 +111,7 @@ function Registro() {
                 Faltan datos
               </Form.Control.Feedback>
             )}
+
         </Form.Group>
         <div>
         <NavLink to="/">
