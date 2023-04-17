@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Modal from 'react-bootstrap/Modal';
 import { useContext, useState } from 'react';
 import MyContext from '../contexts/MyContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const InicioSesion = () => {
   const [email, setEmail] = useState('');
@@ -50,8 +50,15 @@ const InicioSesion = () => {
           <Form.Control type="password" placeholder="contraseña" onChange={(e) => setPassword (e.target.value)} />
         </Form.Group>
 
-        <Button variant="secondary" className='btn-publicar' onClick={() => validarUsuario()}>Iniciar Sesión</Button>{' '}
+<div className='{row}'>
+        <NavLink to="/">
+              <Button variant="outline-secondary" className="btn-publicar">
+                Volver
+              </Button>
+            </NavLink>
 
+        <Button variant="outline-info" className="btn-publicar" onClick={() => validarUsuario()}>Iniciar Sesión</Button>{' '}
+        </div>
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck" style={{marginTop:"20px"}}>
           <Col sm={{ span: 4, offset: 2 }}>
             <Form.Check label="Recordar" />
@@ -71,7 +78,7 @@ const InicioSesion = () => {
           <p>Algun dato ingresado es incorrecto</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="outline-info" className="btn-publicar" onClick={() => setShowModal(false)}>
            Volver a intentar
           </Button>
         </Modal.Footer>
