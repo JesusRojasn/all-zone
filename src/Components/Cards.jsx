@@ -4,11 +4,11 @@ import MyContext from "../contexts/MyContext";
 import { useContext, useState, useEffect } from "react";
 
 function Cards() {
-  const { productos } = useContext(MyContext);
+  const { valorBusqueda, valorFiltro, setValorFiltro, usuario, productos, lstProducto } =
+    useContext(MyContext);
   const navigate = useNavigate();
 
   const [productosMostrados, setProductosMostrados] = useState(productos);
-  const { valorBusqueda, valorFiltro, setValorFiltro, usuario } = useContext(MyContext);
 
   useEffect(() => {
     let nuevosProductos = productos;
@@ -21,8 +21,7 @@ function Cards() {
       nuevosProductos = nuevosProductos.filter((producto) =>
         producto.TITULO.toLowerCase().includes(valorBusqueda.toLowerCase())
       );
-      setValorFiltro('');
-
+      setValorFiltro("");
     }
     setProductosMostrados(nuevosProductos);
   }, [valorFiltro, valorBusqueda, productos]);
@@ -54,7 +53,15 @@ function Cards() {
                     <Card.Text>{p.MARCA}</Card.Text>
                     <Card.Title>{p.TITULO}</Card.Title>
 
-                    <Card.Text>{Number.parseFloat(p.PRECIO).toLocaleString("es-AR", { style: "currency", currency: "ARS", minimumFractionDigits: 0, maximumFractionDigits: 0, useGrouping: true })}</Card.Text>
+                    <Card.Text>
+                      {Number.parseFloat(p.PRECIO).toLocaleString("es-AR", {
+                        style: "currency",
+                        currency: "ARS",
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
+                        useGrouping: true,
+                      })}
+                    </Card.Text>
                     <div>
                       <Button
                         variant="outline-info"
@@ -69,17 +76,61 @@ function Cards() {
               </div>
             );
           })}
+          
+          { lstProducto.map((p) => {
+            return (
+              <Card className="" key={p.id}>
+                <Card.Img variant="top" src={p.imagen} />
+
+                <Card.Body>
+                  <Card.Title>{p.nombre}</Card.Title>
+                  <Card.Text>{p.descripcion}</Card.Text>
+
+                  <Card.Text>
+                    {Number.parseFloat(p.precio).toLocaleString("es-AR", {
+                      style: "currency",
+                      currency: "ARS",
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
+                      useGrouping: true,
+                    })}
+                  </Card.Text>
+
+                  <div>
+                    <Button
+                      variant="outline-info"
+                      className="btn-buscar"
+                      onClick={() => irDetalle(p.id)}
+                    >
+                      Ver Más
+                    </Button>
+                  </div>
+                </Card.Body>
+              </Card>
+            );
+          })}
         </div>
+
         <Modal show={showModal} onHide={handleClose} className="custom-modal">
           <Modal.Header closeButton>
             <Modal.Title>Iniciar sesión</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Debes resgistrarte o iniciar sesión para ver más detalles.</Modal.Body>
+          <Modal.Body>
+            Debes resgistrarte o iniciar sesión para ver más detalles.
+          </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" className="btn-cerrar-modal" onClick={() => navigate("/registro")}>
+            <Button
+              variant="secondary"
+              className="btn-cerrar-modal"
+              onClick={() => navigate("/registro")}
+            >
               Registrase
             </Button>
-            <Button variant="outline-info" className="btn-publicar" onClick={() => navigate("/InicioSesion")}>
+            <Button
+              variant="outline-info"
+              className="btn-publicar"
+              onClick={() => navigate("/InicioSesion")}
+            >
               Iniciar sesión
             </Button>
           </Modal.Footer>
@@ -90,7 +141,3 @@ function Cards() {
 }
 
 export default Cards;
-
-
-
-
