@@ -1,7 +1,7 @@
 import React from "react";
 import Carrusel from "../Components/Carrusel";
 import Cards from "../Components/Cards";
-import SubMenuPriv from "../Components/SubMenupriv";
+/*import SubMenuPriv from "../Components/SubMenupriv";*/
 
 
 const MarketPrivado = () => {
@@ -11,7 +11,7 @@ const MarketPrivado = () => {
   return (
 
     <div>
-      <SubMenuPriv></SubMenuPriv>
+      {/*<SubMenuPriv></SubMenuPriv>*/}
       <Carrusel></Carrusel>
       <Cards></Cards>
     </div>

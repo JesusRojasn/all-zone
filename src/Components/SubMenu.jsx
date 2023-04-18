@@ -13,17 +13,35 @@ import MyContext from "../contexts/MyContext";
 function SubMenu() {
 
 
-  const { valorCaja, setValorBusqueda, setValorCaja, lstCategoria, setValorFiltro, valorFiltro } = useContext(MyContext);
+  const { valorCaja, setValorBusqueda, valorBusqueda,setValorCaja, lstCategoria, setValorFiltro, valorFiltro, productos, setProductos,productosMostrados,setProductosMostrados, usuario, setUsuario } = useContext(MyContext);
 
- const handleSelect = (eventKey) => {
-  setValorFiltro(eventKey);
- 
+ const handleSelect = (value) => {
+  
+  let nuevosProductos = productos;
+  
+    nuevosProductos = productos.filter(
+      (producto) => producto.CATEGORIA === value
+    );
+  
+  
+    nuevosProductos = nuevosProductos.filter((producto) =>
+      producto.TITULO.toLowerCase().includes(valorBusqueda.toLowerCase())
+    );
+    setValorFiltro("");
+  
+    setProductosMostrados(nuevosProductos);
+
+
+  //setValorFiltro(eventKey);
+  
    };
 
-   useEffect(() => {
+   /*useEffect(() => {
    setValorFiltro(`${valorFiltro}`)
    }, [valorFiltro]);
-   console.log(valorFiltro)
+   console.log(valorFiltro)*/
+
+   
 
 
 
@@ -62,9 +80,12 @@ function SubMenu() {
     Buscar
   </Button>
 </Form>
-         
+
+          
 
           <Nav className=" ms-auto menu-opciones">
+            { !usuario.conectado ?
+              <>
             <NavLink
               className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
               to="/inicioSesion"
@@ -78,7 +99,44 @@ function SubMenu() {
             >
               Registro
             </NavLink>
+
+
+            </>
+            :
+            <>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/MarketPrivado"
+            >
+              Marketplace
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/mispublicaciones"
+            >
+              Mis Publicaciones
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/usuario"
+            >
+              Usuario
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
+              to="/"
+              onClick={() => setUsuario(false)}
+            >
+              {" "}
+              Cerrar Sesion
+            </NavLink>
+            </>}
           </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

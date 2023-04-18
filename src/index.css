@@ -30,7 +30,8 @@ code {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
+  
+  
 }
 
 .cards:hover {
@@ -38,6 +39,8 @@ code {
   transition: 0.5s;
   border-radius: 5%;
 }
+
+
 
 .custom-modal .modal-content {
   background-color: rgba(21, 21, 49, 0.719); 
@@ -107,7 +110,7 @@ code {
   background-size: cover;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
   top:0;
   left: 0;
   padding: 10vh;
@@ -119,93 +122,9 @@ code {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 500px) {
-
-  .logo {
-    width:auto;
-  }
-
-  .caja {
-    width: auto;
-  margin-bottom: 15px;}
-
-
-  .btn-publicar {
-    width: auto;
-  margin-bottom: auto;
-
-  }
-
-  .btn-cancelar{
-    width: auto;
-    margin-bottom: auto;
-  }
-
-  .detail-container{
-    display: flex;
-    margin-top: 5%;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .detail-container img{
-    height: 20vh;
-  }
-  .detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    justify-content: center;
-    height: 90vh;
-  }
-
-  /*footer*/
-  .footer {
-    display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: #2f3d4d;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-
-.recuadro{
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: auto;
-  
-  
-  }
-
-
-  .tabla {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2em;
-  }
-
-
-  .rutaNoValida{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: 25em;
-  }
 
 
 
-}
 /*Mis publicaciones */
 
 .ïmagen{
@@ -303,12 +222,18 @@ td{
   margin-top: 5%;
 }
 
+.detail-container img{
+  width: 40vw;
+  border-radius: 2% ;
+}
+
 .detail {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
   justify-content: center;
+  margin-left: 5vw;
 }
 .detail > * {
   margin-bottom: 20px;
@@ -368,6 +293,7 @@ td{
 display: flex;
 justify-content: center;
 }
+
 .contenedor{
   border: 3px solid #56d1c8; 
   border-radius: 20px;
@@ -463,6 +389,8 @@ text-decoration-line: underline;
 
 .ïmagen img{
   width: 17em;
+  border-radius: 5%;
+  margin: 2em;
 }
 
 .tabla{
@@ -539,4 +467,182 @@ Button{
   align-items: center;
   justify-content: center;
 
+}
+
+
+@media screen and (max-width: 1020px) {
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    width:auto;
+    margin: 0;
+  }
+
+  .caja {
+    width: auto;
+  margin-bottom: 15px;}
+
+
+  .btn-publicar {
+    width: auto;
+  margin-bottom: auto;
+
+  }
+
+  .btn-cancelar{
+    width: auto;
+    margin-bottom: auto;
+  }
+
+  .detail-container{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .detail-container img{
+    width: 100%;
+    height: 100%;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    height: auto;
+    margin: 2em;
+  }
+
+  /*footer*/
+  .footer {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #2f3d4d;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
+.recuadro{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  align-items: center
+  
+  }
+
+
+  .tabla {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  }
+
+
+  .rutaNoValida{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 25em;
+  }
+
+ /* cards */
+
+ .homeContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 0fr));
+  justify-content: center;
+  gap: 3rem;
+  padding: 1%;
+
+}
+
+.Card-img{
+  width: auto;
+  height: 20vh;
+
+}
+
+
+
+.btn-buscar{
+  border-color: #56d1c8 !important ;
+  width: auto;
+  
+}
+
+
+  /*Usuario*/
+  .Container{
+    position: absolute;
+  }
+
+  .contenedor{
+    border: 3px solid #56d1c8; 
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+  } 
+
+  .imagen img{
+    width: 25vw;
+  }
+
+
+  .camposUsuario .datos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .camposUsuario .datos .nombre h5{
+    font-size: medium;
+  }
+
+  .camposUsuario .datos .nombreUsuario h5{
+    font-size: medium;
+  }
+
+  .camposUsuario .datos .correo h5{
+    font-size: medium;
+  }
+
+
+  .camposUsuario .datosUsuario .nombre{
+   font-size: medium;
+  }
+
+
+  .camposUsuario .datosUsuario .nombreUsuario{
+    font-size: medium;
+  }
+
+  .camposUsuario .datosUsuario .correo{
+
+  font-size: medium;
+  }
+
+  .navbar-toggler{
+    width: 11vw;
+  }
 }
