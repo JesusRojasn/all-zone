@@ -101,9 +101,9 @@ function AgregarPublicacion() {
           <Form.Label>Categoría</Form.Label>
           <Form.Select aria-label="Default select example" onChange={(e)=> setCategoria(e.target.value)} required isInvalid={!categoria}>
             <option value="">Selecciona categoría</option>
-            <option value="1">Notebooks</option>
-            <option value="2">Celulares</option>
-            <option value="3">Televisores</option>
+            <option value="NOTEBOOK">Notebooks</option>
+            <option value="TELEFONO">Celulares</option>
+            <option value="TELEVISOR">Televisores</option>
           </Form.Select>
           <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
         </Form.Group>
