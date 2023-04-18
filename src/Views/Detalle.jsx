@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SubMenuPriv from "../Components/SubMenupriv";
+/*import SubMenuPriv from "../Components/SubMenupriv";*/
 import { NavLink, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import MyContext from "../contexts/MyContext";
@@ -9,9 +9,9 @@ function Detalle() {
   const { productos } = useContext(MyContext);
 
   // Buscamos el producto con el id correspondiente
-  const productoDetalle = productos.find((p) => p.ID === ID);
+  const productoDetalle = productos.find((p) => p.ID == ID);
 
-  console.log(ID);
+  console.log(productos);
 
   // Si no existe el producto, mostramos un mensaje de error
   if (!productoDetalle) {
@@ -26,9 +26,9 @@ function Detalle() {
 
   return (
     <div>
-      <SubMenuPriv></SubMenuPriv>
+      
       <div className="detail-container">
-        <img src={productoDetalle.IMG} alt="Imagen"></img>
+        <img src={productoDetalle.IMG} alt="Imagen" ></img>
         <div className="detail">
           <h1 className="Nombreproducto">{productoDetalle.TITULO}</h1>
           <h6>{productoDetalle.MARCA}</h6>

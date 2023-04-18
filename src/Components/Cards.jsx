@@ -1,30 +1,28 @@
-import { Container, Button, Card, Modal } from "react-bootstrap";
+import { Container, Button, Card, Modal, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
 import { useContext, useState, useEffect } from "react";
 
 function Cards() {
-  const { valorBusqueda, valorFiltro, setValorFiltro, usuario, productos, lstProducto } =
+  const { valorBusqueda, valorFiltro, setValorFiltro, usuario, productos, setProductos, productosMostrados} =
     useContext(MyContext);
   const navigate = useNavigate();
 
-  const [productosMostrados, setProductosMostrados] = useState(productos);
+  //const [productosMostrados, setProductosMostrados] = useState(productos);
 
-  useEffect(() => {
+  
+  /*useEffect(() => {
     let nuevosProductos = productos;
     if (valorFiltro) {
       nuevosProductos = productos.filter(
         (producto) => producto.CATEGORIA === valorFiltro
       );
     }
-    if (valorBusqueda) {
-      nuevosProductos = nuevosProductos.filter((producto) =>
-        producto.TITULO.toLowerCase().includes(valorBusqueda.toLowerCase())
-      );
+    
       setValorFiltro("");
     }
-    setProductosMostrados(nuevosProductos);
-  }, [valorFiltro, valorBusqueda, productos]);
+    setProductos(nuevosProductos);
+  }, [valorFiltro, valorBusqueda, productos]);*/
 
   const [showModal, setShowModal] = useState(false);
 
@@ -45,8 +43,9 @@ function Cards() {
         <div className="homeContainer">
           {productosMostrados.map((p) => {
             return (
-              <div className="cards" key={p.ID}>
-                <Card className="">
+              <Row>
+              <div className="cards" key={p.ID}  >
+                <Card >
                   <Card.Img key={p.ID} variant="top" src={p.IMG} />
 
                   <Card.Body>
@@ -74,41 +73,10 @@ function Cards() {
                   </Card.Body>
                 </Card>
               </div>
+              </Row>
             );
           })}
           
-          { lstProducto.map((p) => {
-            return (
-              <Card className="" key={p.id}>
-                <Card.Img variant="top" src={p.imagen} />
-
-                <Card.Body>
-                  <Card.Title>{p.nombre}</Card.Title>
-                  <Card.Text>{p.descripcion}</Card.Text>
-
-                  <Card.Text>
-                    {Number.parseFloat(p.precio).toLocaleString("es-AR", {
-                      style: "currency",
-                      currency: "ARS",
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 0,
-                      useGrouping: true,
-                    })}
-                  </Card.Text>
-
-                  <div>
-                    <Button
-                      variant="outline-info"
-                      className="btn-buscar"
-                      onClick={() => irDetalle(p.id)}
-                    >
-                      Ver Más
-                    </Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            );
-          })}
         </div>
 
         <Modal show={showModal} onHide={handleClose} className="custom-modal">

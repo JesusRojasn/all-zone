@@ -27,11 +27,11 @@ const SubMenuPriv = () => {
     
 
   return (
-    <Navbar expand="lg" bg="light" variant="light" sticky="top" fixed="top">
+    <Navbar expand="lg" bg="light" variant="light" sticky="top" fixed="top" >
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto Menu">
+        <Navbar.Collapse id="basic-navbar-nav" >
+          <Nav className="me-auto Menu" style={{width: "55px"}}>
             <NavDropdown id="nav-dropdown-dark-example" title="Categorías" onSelect={handleSelect}>
               <NavDropdown.Item eventKey={lstCategoria[0]}>{lstCategoria[0]}</NavDropdown.Item>
               <NavDropdown.Item eventKey={lstCategoria[1]}>{lstCategoria[1]}</NavDropdown.Item>

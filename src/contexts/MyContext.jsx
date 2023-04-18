@@ -6,10 +6,13 @@ export const ConstextoProvider = (props) => {
   // llamado Json, simulando una API con un endpoint
   const [productos, setProductos] = useState([]);
 
+  const [lstProducto, setLstProducto] = useState([]);
+
   const getProductos = async () => {
     const res = await fetch("http://localhost:3000/productos.json");
     const data = await res.json();
     setProductos(data);
+    setProductosMostrados(data);
   };
 
   useEffect(() => {
@@ -22,8 +25,7 @@ export const ConstextoProvider = (props) => {
 
   const [valorFiltro, setValorFiltro] = useState("");
 
-
-  
+ const [productosMostrados, setProductosMostrados] = useState([]);
 
   const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"]
     
@@ -52,9 +54,8 @@ export const ConstextoProvider = (props) => {
     },
   ]);
 
- const lstProducto = [
-  
- ]
+ //const lstProducto = [
+  //]
 
 
 
@@ -62,10 +63,14 @@ export const ConstextoProvider = (props) => {
   return (
     <MyContext.Provider
       value={{
+        productosMostrados,
+        setProductosMostrados,
         lstProducto,
+        setLstProducto,
         lstUsuario,
         setLstUsuario,
         productos,
+        setProductos,
         setUsuario,
         usuario,
         valorBusqueda,

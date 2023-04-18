@@ -3,6 +3,7 @@ import { Button, Form, Figure, InputGroup } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
 
+
 function AgregarPublicacion() {
   const [imagen, setImagen] = useState("")
   const [nombreProducto, setNombreProducto] = useState("");
@@ -12,18 +13,40 @@ function AgregarPublicacion() {
   const [marca, setMarca] = useState("");
 
 
-  const { lstProducto } = useContext(MyContext);
+  const { lstProducto, setLstProducto, setProductos, productos, usuario,setProductosMostrados  } = useContext(MyContext);
   const navigate = useNavigate();
 
+  const metodoimg = e => {
+    const file = e.target.files[0];
+    const read = new FileReader();
+    read.onload = function () {
+      const img = read.result
+      setImagen(img)
+      
+    }
+    read.readAsDataURL(file);
+   
+  }
+  
+
   const registrarProducto = () => {
-    lstProducto.push({
-      imagen: imagen,
-      nombre: nombreProducto,
-      marca: marca,
-      descripcion: descripcion ,
-      categoria: categoria,
-      precio: precio,
-    });
+
+    
+   const nuevoProducto = {
+    MARCA: marca,  
+    ID:Date.now(),
+    TITULO: nombreProducto,
+    DESCRIPCION: descripcion ,
+    CATEGORIA: categoria,
+    PRECIO: precio,
+    VENDEDOR: usuario.nombre ,
+    IMG: imagen
+    };
+
+
+    setProductos([nuevoProducto, ...productos])
+    setLstProducto([nuevoProducto, ...lstProducto])
+    setProductosMostrados([nuevoProducto, ...productos])
     navigate("/MisPublicaciones");
   };
 
@@ -37,14 +60,14 @@ function AgregarPublicacion() {
             display: " flex",
             alignItems: "center",
             flexDirection: "column",
+            width: "300px"
           }}
         >
-          <Figure.Image
-
-          />
+         
+          <Figure.Image src={imagen}/>
 
           <Form.Group>
-            <Form.Control type="file"  name="file" onChange={(e) => setImagen(e.target.value)} required/>
+            <Form.Control type="file"  name="file" onChange={(e) => metodoimg(e)} required/>
             <Form.Control.Feedback
               type="invalid"
               tooltip

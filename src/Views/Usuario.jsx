@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SubMenuPriv from "../Components/SubMenupriv";
+/*import SubMenuPriv from "../Components/SubMenupriv";*/
 import { Container } from "react-bootstrap";
 import MyContext from "../contexts/MyContext";
 
@@ -12,7 +12,7 @@ const Usuario = () => {
  console.log(usuario);
   return (
     <div>
-      <SubMenuPriv></SubMenuPriv>
+     
       <Container>
         <div className="contenedor">
           <div className="imagen">
@@ -53,9 +53,7 @@ const Usuario = () => {
           <div className="cambioContrasenha">
             <p>Cambiar contraseña</p>
           </div>
-          <div className="sesion">
-            <p>Cerrar Sesion</p>
-          </div>
+          
           </div>
         </div>
       </Container>

@@ -1,5 +1,4 @@
 import React, { useContext} from "react";
-import SubMenuPriv from "../Components/SubMenupriv";
 import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
@@ -7,16 +6,17 @@ import MyContext from "../contexts/MyContext";
 const MisPublicaciones = () => {
   const { lstProducto } = useContext(MyContext);
 
+  console.log(lstProducto);
   return (
     <div>
-      <SubMenuPriv />
+      
       <div className="contenedorPublicaciones">
         {lstProducto.length > 0 ? (
           lstProducto.map((p) => {
             return (
               <div className="recuadro">
                 <div className="ïmagen">
-                  <img src={p.imagen} alt={p.nombre} />
+                  <img src={p.IMG} alt={p.TITULO} />
                 </div>
                 <div className="tabla">
                   <table>
@@ -27,10 +27,10 @@ const MisPublicaciones = () => {
                       <td className="titulos"> Precio </td>
                     </tr>
                     <tr>
-                      <td> {p.nombre} </td>
-                      <td> {p.marca} </td>
-                      <td>{p.descripcion}</td>
-                      <td> $ {p.precio} </td>
+                      <td> {p.TITULO} </td>
+                      <td> {p.MARCA} </td>
+                      <td>{p.DESCRIPCION}</td>
+                      <td> $ {p.PRECIO} </td>
                     </tr>
                   </table>
                 </div>

@@ -14,6 +14,7 @@ import Detalle from "./Views/Detalle";
 import MyContext from "./contexts/MyContext";
 import RutaNoValida from "./Views/RutaNoValida";
 import LogoPriv from "./Components/LogoPriv";
+import SubMenu from "./Components/SubMenu";
 
 
 
@@ -28,7 +29,7 @@ function App() {
       <BrowserRouter>
 
       {usuario.conectado ? <LogoPriv></LogoPriv> : <Logo></Logo>}
-
+        <SubMenu></SubMenu>
         <Routes>
           
           <Route path="/" element={<MarketPublico></MarketPublico>}></Route> 
