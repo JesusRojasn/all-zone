@@ -5,11 +5,8 @@ import MyContext from "../contexts/MyContext";
 
 
 const Usuario = () => {
-
-
   const {usuario} = useContext(MyContext);
 
- console.log(usuario);
   return (
     <div>
      
@@ -50,10 +47,9 @@ const Usuario = () => {
             </div>
           </div>
           <div className="contrasenhas">
-          <div className="cambioContrasenha">
-            <p>Cambiar contraseña</p>
-          </div>
-          
+            <div className="cambioContrasenha">
+              <p>Cambiar contraseña</p>
+            </div>
           </div>
         </div>
       </Container>

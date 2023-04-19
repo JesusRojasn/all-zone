@@ -13,7 +13,6 @@ function AgregarPublicacion() {
   const [marca, setMarca] = useState("");
   const [camposInvalidos, setCamposInvalidos] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
   const { lstProducto, setLstProducto, setProductos, productos, usuario, setProductosMostrados } = useContext(MyContext);
   const navigate = useNavigate();
 
@@ -78,7 +77,6 @@ function AgregarPublicacion() {
         >
          
           <Figure.Image src={imagen}/>
-
           <Form.Group>
             <Form.Control type="file"  name="file" onChange={(e) => metodoimg(e)} required/>
             <Form.Control.Feedback
@@ -149,17 +147,16 @@ function AgregarPublicacion() {
           <Modal.Title>Error</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        Por favor completa todos los campos
+          Por favor completa todos los campos
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal} className="btn-cerrar-modal">
             Cerrar
           </Button>
-          
         </Modal.Footer>
       </Modal>
     </div>
   );
-}
+};
 
 export default AgregarPublicacion;
