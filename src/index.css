@@ -11,6 +11,10 @@ body {
   min-height: 100vh;
 }
 
+html {
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -56,6 +60,7 @@ code {
 }
 
 
+
 /*footer*/
 
 
@@ -66,7 +71,7 @@ code {
   padding-right: 30px;
   background-color: #2f3d4d;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -102,6 +107,25 @@ code {
 
 }
 
+@media (max-width: 770px) {
+  .formulario {
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+   
+  }
+}
+
+@media (max-width: 768px) {
+  .formulario .caja input {
+    width: auto;
+  }
+}
+
+
+
 .fondoFormulario {
   display: flex;
   justify-content: center;
@@ -113,7 +137,7 @@ code {
   position: relative;
   top:0;
   left: 0;
-  padding: 10vh;
+  padding: 20vh;
   
 }
 

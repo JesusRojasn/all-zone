@@ -144,7 +144,7 @@ function AgregarPublicacion() {
         </div>
       </Form>
       
-      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
+      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal" size="md">
         <Modal.Header closeButton>
           <Modal.Title>Error</Modal.Title>
         </Modal.Header>

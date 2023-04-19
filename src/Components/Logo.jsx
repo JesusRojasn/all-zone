@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 function Logo() {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" >
       <Container fluid>
         <NavLink to="/">
           <img
