@@ -16,28 +16,21 @@ import RutaNoValida from "./Views/RutaNoValida";
 import LogoPriv from "./Components/LogoPriv";
 import SubMenu from "./Components/SubMenu";
 
-
-
 function App() {
 
   const { usuario } = useContext(MyContext);
   
-
   return (
     <div className="App">
-      
       <BrowserRouter>
-
       {usuario.conectado ? <LogoPriv></LogoPriv> : <Logo></Logo>}
         <SubMenu></SubMenu>
         <Routes>
-          
           <Route path="/" element={<MarketPublico></MarketPublico>}></Route> 
           <Route path="/registro" element={<Registro></Registro>}></Route>
           <Route path="/InicioSesion" element={<InicioSesion></InicioSesion>}></Route>   
           <Route path="*" element={<RutaNoValida></RutaNoValida>}></Route>
           <Route path="/MarketPublico" element={<MarketPublico></MarketPublico>}></Route>
-
           {
           usuario.conectado && 
           <>
@@ -48,12 +41,9 @@ function App() {
           <Route path="/detalle/:ID" element={<Detalle></Detalle>}></Route>
           </>
           }
-          
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-
-
     </div>
   );
 }

@@ -20,19 +20,14 @@ export const ConstextoProvider = (props) => {
   }, []);
 
   const [valorBusqueda, setValorBusqueda] = useState("");
-
   const [valorCaja, setValorCaja] = useState("");
-
   const [valorFiltro, setValorFiltro] = useState("");
-
- const [productosMostrados, setProductosMostrados] = useState([]);
-
-  const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"]
+  const [productosMostrados, setProductosMostrados] = useState([]);
+  const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"];
     
 
   //validacion de usuario
   const [usuario, setUsuario] = useState(false);
-
   const [lstUsuario, setLstUsuario] = useState ([
     {
       nombre: "Consuelo Araya",
@@ -53,12 +48,6 @@ export const ConstextoProvider = (props) => {
       clave: "f",
     },
   ]);
-
- //const lstProducto = [
-  //]
-
-
-
 
   return (
     <MyContext.Provider

@@ -1,31 +1,13 @@
 import { Container, Button, Card, Modal, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import MyContext from "../contexts/MyContext";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState} from "react";
 
 function Cards() {
-  const { valorBusqueda, valorFiltro, setValorFiltro, usuario, productos, setProductos, productosMostrados} =
-    useContext(MyContext);
+  const {  usuario, productosMostrados} = useContext(MyContext);
   const navigate = useNavigate();
 
-  //const [productosMostrados, setProductosMostrados] = useState(productos);
-
-  
-  /*useEffect(() => {
-    let nuevosProductos = productos;
-    if (valorFiltro) {
-      nuevosProductos = productos.filter(
-        (producto) => producto.CATEGORIA === valorFiltro
-      );
-    }
-    
-      setValorFiltro("");
-    }
-    setProductos(nuevosProductos);
-  }, [valorFiltro, valorBusqueda, productos]);*/
-
   const [showModal, setShowModal] = useState(false);
-
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 

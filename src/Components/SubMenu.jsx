@@ -3,17 +3,13 @@ import {
   Nav,
   Navbar,
   NavDropdown,
-  Form,
-  Button,
-} from "react-bootstrap";
+  Form} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import MyContext from "../contexts/MyContext";
 
 function SubMenu() {
-
-
-  const { valorCaja, setValorBusqueda, valorBusqueda,setValorCaja, lstCategoria, setValorFiltro, valorFiltro, productos, setProductos,productosMostrados,setProductosMostrados, usuario, setUsuario } = useContext(MyContext);
+  const { lstCategoria, productos, setProductosMostrados, usuario, setUsuario } = useContext(MyContext);
 
  const handleSelect = (value) => {
   let nuevosProductos = []
@@ -24,9 +20,7 @@ function SubMenu() {
    } else {
     setProductosMostrados(productos);
     console.log(productos)
-   }
-   
-    
+   };
   };
 
     const buscar = (valorBusqueda) => {
@@ -34,7 +28,7 @@ function SubMenu() {
       producto.TITULO.toLowerCase().includes(valorBusqueda.toLowerCase())
     );
     setProductosMostrados(nuevosProductos);
-    }
+    };
 
    return (
     <Navbar expand="lg" bg="light" variant="light" sticky="top" fixed="top">
@@ -51,20 +45,14 @@ function SubMenu() {
           </Nav>
 
           <Form className="d-flex">
-  <Form.Control
-    type="search"
-    placeholder="Buscar"
-    className="me-2"
-    aria-label="Buscar"
-    onChange={(e) => buscar(e.target.value)}
-    
-  />
-  {/* <Button
-    variant="outline-info"
-    className="btn-buscar"
-    onClick={() => setValorBusqueda(valorCaja)}
-  > Buscar  </Button> */}
-</Form>
+            <Form.Control
+              type="search"
+              placeholder="Buscar"
+              className="me-2"
+              aria-label="Buscar"
+              onChange={(e) => buscar(e.target.value)}
+            />
+          </Form>
 
           
 

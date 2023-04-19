@@ -12,7 +12,6 @@ const InicioSesion = () => {
   const [password, setPassword] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [validated, setValidated] = useState(false); // Agregar estado para la validación
-
   const { lstUsuario, setUsuario } = useContext(MyContext);
   const navigate = useNavigate();
 

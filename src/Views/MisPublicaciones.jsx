@@ -5,11 +5,8 @@ import MyContext from "../contexts/MyContext";
 
 const MisPublicaciones = () => {
   const { lstProducto } = useContext(MyContext);
-
-  console.log(lstProducto);
   return (
     <div>
-      
       <div className="contenedorPublicaciones">
         {lstProducto.length > 0 ? (
           lstProducto.map((p) => {

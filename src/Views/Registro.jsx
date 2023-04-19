@@ -15,10 +15,8 @@ function Registro() {
   const [aliasVacio, setAliasVacio] = useState(false);
   const [emailVacio, setEmailVacio] = useState(false);
   const [passwordVacio, setPasswordVacio] = useState(false);
-
   const { lstUsuario, setLstUsuario } = useContext(MyContext);
   const navigate = useNavigate();
-
   const handleCloseModal = () => setShowModal(false);
 
   const registrarUsuario = () => {
@@ -70,9 +68,9 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setAlias(e.target.value)}
-
             isInvalid={aliasVacio}
           />
+
           {aliasVacio && (
             <Form.Control.Feedback type="invalid">
               Faltan datos
@@ -87,7 +85,6 @@ function Registro() {
             type="email"
             placeholder="xxxx@mail.com"
             onChange={(e) => setEmail(e.target.value)}
-
             isInvalid={emailVacio}
           />
           {emailVacio && (
@@ -103,9 +100,8 @@ function Registro() {
             type="password"
             placeholder="*******"
             onChange={(e) => setPassword(e.target.value)}
-
             isInvalid={passwordVacio}
-            />
+          />
             {passwordVacio && (
               <Form.Control.Feedback type="invalid">
                 Faltan datos
@@ -114,14 +110,14 @@ function Registro() {
 
         </Form.Group>
         <div>
-        <NavLink to="/">
-              <Button variant="outline-info" className="btn-publicar">
-                Volver
-              </Button>
-            </NavLink>
-          <Button type="submit" variant="outline-info" className="btn-publicar">
-            Crear cuenta
-          </Button>
+          <NavLink to="/">
+            <Button variant="outline-info" className="btn-publicar">
+              Volver
+            </Button>
+          </NavLink>
+            <Button type="submit" variant="outline-info" className="btn-publicar">
+              Crear cuenta
+            </Button>
           
         </div>
       </Form>
