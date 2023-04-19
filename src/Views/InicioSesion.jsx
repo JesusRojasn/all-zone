@@ -11,59 +11,93 @@ const InicioSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [validated, setValidated] = useState(false); // Agregar estado para la validación
 
-  const { lstUsuario, setUsuario} = useContext(MyContext);
+  const { lstUsuario, setUsuario } = useContext(MyContext);
   const navigate = useNavigate();
 
   //validacion de los datos de usuarios
-
   const validarUsuario = () => {
-    const usuarioValido = lstUsuario.find((usuario) => usuario.email === email && usuario.clave === password);
+    const form = document.querySelector('.formulario'); // Obtener el formulario
+    const isValid = form.checkValidity(); // Validar el formulario
+    setValidated(true); // Establecer validated a true para mostrar los asteriscos
 
-    if (usuarioValido) {
-      setUsuario({ conectado: true, 
-                   email: usuarioValido.email, 
-                   nombre: usuarioValido.nombre, 
-                   nombreUsuario: usuarioValido.alias});
-      navigate('/marketPrivado');
-      
-    } else {
-      setShowModal(true);
+    if (isValid) { // Si el formulario es válido, continuar
+      const usuarioValido = lstUsuario.find(
+        (usuario) => usuario.email === email && usuario.clave === password
+      );
+
+      if (usuarioValido) {
+        setUsuario({
+          conectado: true,
+          email: usuarioValido.email,
+          nombre: usuarioValido.nombre,
+          nombreUsuario: usuarioValido.alias,
+        });
+        navigate('/marketPrivado');
+      } else {
+        setShowModal(true);
+      }
+    } else { // Si el formulario no es válido, no hacer nada
+      return;
     }
-
-    console.log(usuarioValido);
   };
-  
 
   //renderizado
   return (
     <div className='fondoFormulario'>
-      <Form className='formulario'>
-
-        <Form.Group className="caja" controlId="formGroupEmail">
+      <Form className='formulario' noValidate validated={validated}> {/* Agregar las propiedades noValidate y validated al formulario */}
+        <Form.Group className='caja' controlId='formGroupEmail'>
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="example@mail.com" onChange={(e) => setEmail (e.target.value)} required isInvalid={!email}/>
-            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
+          <Form.Control
+            type='email'
+            placeholder='example@mail.com'
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            isInvalid={!email && validated} // Agregar la propiedad isInvalid
+          />
+          <Form.Control.Feedback type='invalid'>
+            Este campo es requerido
+          </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className="caja" controlId="formGroupPassword">
+        <Form.Group className='caja' controlId='formGroupPassword'>
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="contraseña" onChange={(e) => setPassword (e.target.value)} required isInvalid={!password}/>
-            <Form.Control.Feedback type="invalid">Este campo es requerido</Form.Control.Feedback>
+          <Form.Control
+            type='password'
+            placeholder='contraseña'
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            isInvalid={!password && validated} // Agregar la propiedad isInvalid
+          />
+          <Form.Control.Feedback type='invalid'>
+            Este campo es requerido
+          </Form.Control.Feedback>
         </Form.Group>
 
-<div className='{row}'>
-        <NavLink to="/">
-              <Button variant="outline-secondary" className="btn-publicar">
-                Volver
-              </Button>
-            </NavLink>
+        <div className='{row}'>
+          <NavLink to='/'>
+            <Button variant='outline-secondary' className='btn-publicar'>
+              Volver
+            </Button>
+          </NavLink>
 
-        <Button variant="outline-info" className="btn-publicar" onClick={() => validarUsuario()}>Iniciar Sesión</Button>{' '}
+          <Button
+            variant='outline-info'
+            className='btn-publicar'
+            onClick={() => validarUsuario()}
+          >
+            Iniciar Sesión
+          </Button>{' '}
         </div>
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck" style={{marginTop:"20px"}}>
+        <Form.Group
+          as={Row}
+          className='mb-3'
+          controlId='formHorizontalCheck'
+          style={{ marginTop: '20px' }}
+        >
           <Col sm={{ span: 4, offset: 2 }}>
-            <Form.Check label="Recordar" />
+            <Form.Check label='Recordar' />
           </Col>
         </Form.Group>
         <div className="olvidarcontraseña">
