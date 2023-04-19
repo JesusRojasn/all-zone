@@ -11,7 +11,7 @@ function Logo() {
       <Container fluid>
         <NavLink to="/">
           <img
-            className="logo"
+            className="logo img-fluid"
             src="http://localhost:3000/logo-allzone.jpg"
             alt="logo"
           />

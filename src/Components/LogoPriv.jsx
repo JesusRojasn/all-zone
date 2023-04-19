@@ -11,7 +11,7 @@ function LogoPriv() {
       <Container fluid>
         <NavLink to="/MarketPrivado">
           <img
-            className="logo"
+            className="logo img-fluid"
             src="http://localhost:3000/logo-allzone.jpg"
             alt="logo"
           />
