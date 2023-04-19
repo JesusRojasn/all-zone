@@ -9,7 +9,7 @@ function Detalle() {
   const { productos } = useContext(MyContext);
 
   // Buscamos el producto con el id correspondiente
-  const productoDetalle = productos.find((p) => p.ID == ID);
+  const productoDetalle = productos.find((p) => p.ID === ID);
 
   console.log(productos);
 
