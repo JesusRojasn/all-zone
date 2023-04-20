@@ -480,6 +480,7 @@ Button{
 
 .homeContainerSuperior{
   margin-top: 2em;
+  height: 235vh;
 }
 
 /*Ruta no Valida*/
@@ -667,6 +668,6 @@ Button{
   }
 
   .navbar-toggler{
-    width: 11vw;
+    width: auto;
   }
 }
