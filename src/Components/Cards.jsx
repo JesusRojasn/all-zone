@@ -25,14 +25,14 @@ function Cards() {
         <div className="homeContainer">
           {productosMostrados.map((p) => {
             return (
-              <Row>
-              <div className="cards" key={p.ID}  >
+              <Row key={p.ID}>
+              <div className="cards">
                 <Card >
-                  <Card.Img key={p.ID} variant="top" src={p.IMG} />
+                  <Card.Img variant="top" src={p.IMG} />
 
                   <Card.Body>
-                    <Card.Text>{p.MARCA}</Card.Text>
-                    <Card.Title>{p.TITULO}</Card.Title>
+                    <Card.Text >{p.MARCA}</Card.Text>
+                    <Card.Title >{p.TITULO}</Card.Title>
 
                     <Card.Text>
                       {Number.parseFloat(p.PRECIO).toLocaleString("es-AR", {
@@ -43,14 +43,16 @@ function Cards() {
                         useGrouping: true,
                       })}
                     </Card.Text>
-                    <div>
+                    <div style={{ display: "flex", justifyContent: "space-around"}}>
                       <Button
                         variant="outline-info"
                         className="btn-buscar"
                         onClick={() => irDetalle(p.ID)}
+                        style={{ width: "auto"}}
                       >
                         Ver Más
                       </Button>
+                      <Button variant="danger" className="btn-buscar" style={{ marginLeft: "2%", width: "auto"}} >Comprar</Button>
                     </div>
                   </Card.Body>
                 </Card>
@@ -68,8 +70,9 @@ function Cards() {
           <Modal.Body>
             Debes resgistrarte o iniciar sesión para ver más detalles.
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer style={{ display: "flex", justifyContent: "space-around"}} >
             <Button
+              style={{ width: "auto"}}
               variant="secondary"
               className="btn-cerrar-modal"
               onClick={() => navigate("/registro")}
