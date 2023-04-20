@@ -53,7 +53,7 @@ function SubMenu() {
               <NavDropdown.Item eventKey={lstCategoria[2]}>
                 {lstCategoria[2]}
               </NavDropdown.Item>
-              <NavDropdown.Item eventKey="">SIN FILTRO</NavDropdown.Item>
+              <NavDropdown.Item eventKey="">VER TODO</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
