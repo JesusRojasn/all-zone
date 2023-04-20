@@ -5,12 +5,12 @@ import { NavLink } from "react-router-dom";
 
 function Logo() {
   return (
-    <Navbar expand="lg" >
+    <Navbar expand="lg">
       <Container fluid>
         <NavLink to="/">
           <img
             className="logo img-fluid"
-            src="http://localhost:3000/logo-allzone.jpg"
+            src={window.location.origin + "/logo-allzone.jpg"}
             alt="logo"
           />
         </NavLink>

@@ -16,7 +16,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://localhost:3000/banner2.png"
+            src={window.location.origin + "/banner2.png"}
             alt="Second slide"
           />
 
@@ -25,7 +25,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://localhost:3000/banner3.png"
+            src={window.location.origin + "/banner3.png"}
             alt="Third slide"
           />
 
