@@ -8,7 +8,7 @@ const Carrusel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://localhost:3000/banner1.png"
+            src={window.location.origin + "/banner1.png"}
             alt="First slide"
           />
           <Carousel.Caption></Carousel.Caption>
