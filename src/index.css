@@ -587,6 +587,11 @@ Button{
 
  /* cards */
 
+ .homeContainerSuperior{
+  margin-top: 2em;
+  height: auto;
+}
+
  .homeContainer{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 0fr));
@@ -601,6 +606,7 @@ Button{
   height: 20vh;
 
 }
+
 
 
 
