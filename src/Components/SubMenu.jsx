@@ -1,46 +1,59 @@
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Form} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown, Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../contexts/MyContext";
 
 function SubMenu() {
-  const { lstCategoria, productos, setProductosMostrados, usuario, setUsuario } = useContext(MyContext);
+  const {
+    lstCategoria,
+    productos,
+    setProductosMostrados,
+    usuario,
+    setUsuario,
+  } = useContext(MyContext);
 
- const handleSelect = (value) => {
-  let nuevosProductos = []
-   if(value !== ""){
-      nuevosProductos = productos.filter((producto) => producto.CATEGORIA === value);
+  const handleSelect = (value) => {
+    let nuevosProductos = [];
+    if (value !== "") {
+      nuevosProductos = productos.filter(
+        (producto) => producto.CATEGORIA === value
+      );
       setProductosMostrados(nuevosProductos);
-      console.log(productos)
-   } else {
-    setProductosMostrados(productos);
-    console.log(productos)
-   };
+      console.log(productos);
+    } else {
+      setProductosMostrados(productos);
+      console.log(productos);
+    }
   };
 
-    const buscar = (valorBusqueda) => {
-      const nuevosProductos = productos.filter((producto) =>
+  const buscar = (valorBusqueda) => {
+    const nuevosProductos = productos.filter((producto) =>
       producto.TITULO.toLowerCase().includes(valorBusqueda.toLowerCase())
     );
     setProductosMostrados(nuevosProductos);
-    };
+  };
 
-   return (
+  return (
     <Navbar expand="lg" bg="light" variant="light" sticky="top" fixed="top">
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto Menu">
-            <NavDropdown id="nav-dropdown-dark-example" title="Categorías" onSelect={handleSelect}>
-              <NavDropdown.Item eventKey="">seleccione categoria</NavDropdown.Item>
-              <NavDropdown.Item eventKey={lstCategoria[0]}>{lstCategoria[0]}</NavDropdown.Item>
-              <NavDropdown.Item eventKey={lstCategoria[1]}>{lstCategoria[1]}</NavDropdown.Item>
-              <NavDropdown.Item eventKey={lstCategoria[2]}>{lstCategoria[2]}</NavDropdown.Item>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Categorías"
+              onSelect={handleSelect}
+            >
+              <NavDropdown.Item eventKey={lstCategoria[0]}>
+                {lstCategoria[0]}
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey={lstCategoria[1]}>
+                {lstCategoria[1]}
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey={lstCategoria[2]}>
+                {lstCategoria[2]}
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey="">SIN FILTRO</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
@@ -54,67 +67,73 @@ function SubMenu() {
             />
           </Form>
 
-          
-
           <Nav className=" ms-auto menu-opciones">
-            { !usuario.conectado ?
+            {!usuario.conectado ? (
               <>
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/inicioSesion"
-            >
-              Iniciar Sesion
-            </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/inicioSesion"
+                >
+                  Iniciar Sesion
+                </NavLink>
 
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/registro"
-            >
-              Registro
-            </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/registro"
+                >
+                  Registro
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/MarketPrivado"
+                >
+                  Marketplace
+                </NavLink>
 
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/mispublicaciones"
+                >
+                  Mis Publicaciones
+                </NavLink>
 
-            </>
-            :
-            <>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/usuario"
+                >
+                  Usuario
+                </NavLink>
 
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/MarketPrivado"
-            >
-              Marketplace
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/mispublicaciones"
-            >
-              Mis Publicaciones
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/usuario"
-            >
-              Usuario
-            </NavLink>
-
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActiva" : "Menu")}
-              to="/"
-              onClick={() => setUsuario(false)}
-            >
-              {" "}
-              Cerrar Sesion
-            </NavLink>
-            </>}
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "viewActiva" : "Menu"
+                  }
+                  to="/"
+                  onClick={() => setUsuario(false)}
+                >
+                  {" "}
+                  Cerrar Sesion
+                </NavLink>
+              </>
+            )}
           </Nav>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
-
 
 export default SubMenu;
