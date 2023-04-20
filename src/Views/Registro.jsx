@@ -51,7 +51,6 @@ function Registro() {
             type="text"
             placeholder=""
             onChange={(e) => setNombre(e.target.value)}
-
             isInvalid={nombreVacio}
           />
           {nombreVacio && (
@@ -59,7 +58,6 @@ function Registro() {
               Faltan datos
             </Form.Control.Feedback>
           )}
-
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupAlias">
@@ -76,7 +74,6 @@ function Registro() {
               Faltan datos
             </Form.Control.Feedback>
           )}
-
         </Form.Group>
 
         <Form.Group className="caja" controlId="formGroupEmail">
@@ -102,12 +99,11 @@ function Registro() {
             onChange={(e) => setPassword(e.target.value)}
             isInvalid={passwordVacio}
           />
-            {passwordVacio && (
-              <Form.Control.Feedback type="invalid">
-                Faltan datos
-              </Form.Control.Feedback>
-            )}
-
+          {passwordVacio && (
+            <Form.Control.Feedback type="invalid">
+              Faltan datos
+            </Form.Control.Feedback>
+          )}
         </Form.Group>
         <div>
           <NavLink to="/">
@@ -115,13 +111,16 @@ function Registro() {
               Volver
             </Button>
           </NavLink>
-            <Button type="submit" variant="outline-info" className="btn-publicar">
-              Crear cuenta
-            </Button>
-          
+          <Button type="submit" variant="outline-info" className="btn-publicar">
+            Crear cuenta
+          </Button>
         </div>
       </Form>
-      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
+      <Modal
+        show={showModal}
+        onHide={handleCloseModal}
+        className="custom-modal"
+      >
         <Modal.Header closeButton>
           <Modal.Title>Registro Exitoso</Modal.Title>
         </Modal.Header>
@@ -129,10 +128,18 @@ function Registro() {
           Tu cuenta ha sido creada con éxito. Ahora puedes iniciar sesión.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal} className="btn-cerrar-modal">
+          <Button
+            variant="outline-info"
+            onClick={handleCloseModal}
+            className="btn-publicar"
+          >
             Cerrar
           </Button>
-          <Button variant="outline-info" className="btn-publicar" onClick={() => navigate("/InicioSesion")}>
+          <Button
+            variant="outline-info"
+            className="btn-publicar"
+            onClick={() => navigate("/InicioSesion")}
+          >
             Iniciar Sesión
           </Button>
         </Modal.Footer>
