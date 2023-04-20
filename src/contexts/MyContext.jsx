@@ -9,7 +9,7 @@ export const ConstextoProvider = (props) => {
   const [lstProducto, setLstProducto] = useState([]);
 
   const getProductos = async () => {
-    const res = await fetch("http://localhost:3000/productos.json");
+    const res = await fetch(window.location.origin + "/productos.json");
     const data = await res.json();
     setProductos(data);
     setProductosMostrados(data);
@@ -24,11 +24,10 @@ export const ConstextoProvider = (props) => {
   const [valorFiltro, setValorFiltro] = useState("");
   const [productosMostrados, setProductosMostrados] = useState([]);
   const lstCategoria = ["TELEVISOR", "NOTEBOOK", "TELEFONO"];
-    
 
   //validacion de usuario
   const [usuario, setUsuario] = useState(false);
-  const [lstUsuario, setLstUsuario] = useState ([
+  const [lstUsuario, setLstUsuario] = useState([
     {
       nombre: "Consuelo Araya",
       alias: "carayao",
